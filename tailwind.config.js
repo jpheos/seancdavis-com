@@ -1,6 +1,10 @@
 module.exports = {
   purge: [],
   theme: {
+    container: {
+      center: true,
+      padding: "2rem"
+    },
     extend: {
       colors: {
         black: "#051c28",
@@ -9,8 +13,10 @@ module.exports = {
           dark: "#1d4a8f"
         },
         gray: {
+          blue: "#4b6a8a",
           dark: "#1b3846",
-          default: "#eaeced"
+          default: "#eaeced",
+          light: "#eef1f5"
         },
         green: {
           default: "#2260bf"

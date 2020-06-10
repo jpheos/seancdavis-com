@@ -4,7 +4,14 @@ import PropTypes from "prop-types"
 import "normalize.css"
 import "./styles.css"
 
-const Layout = ({ children }) => <>{children}</>
+import Header from "./header"
+
+const Layout = ({ children }) => (
+  <>
+    <Header />
+    {children}
+  </>
+)
 
 Layout.propTypes = {
   /**

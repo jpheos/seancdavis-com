@@ -38,7 +38,7 @@ module.exports = {
           },
           {
             family: `Lato`,
-            variants: [`300`, `700`]
+            variants: [`300`, `400`, `700`]
           },
           {
             family: `Lora`,
