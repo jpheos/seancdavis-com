@@ -1,10 +1,11 @@
 .headerLink {
-  @apply font-normal
+  @apply font-bold
     font-sans
     p-2
     relative
     text-gray-blue
-    text-sm
+    text-xs
+    tracking-widest
     uppercase;
 
   &:before {
