@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import "normalize.css"
-import "./styles.module.css"
+import "./styles.css"
 
 const Layout = ({ children }) => <>{children}</>
 
