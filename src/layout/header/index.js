@@ -2,6 +2,8 @@ import React from "react"
 // import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
+import styles from "./styles.module.css"
+
 import Button from "../../components/button"
 import Logo from "../../components/logo"
 
@@ -9,42 +11,26 @@ const Header = () => (
   <header className="py-4">
     <div className="container flex justify-between items-center">
       <Link to="/">
-        <Logo className="h-1" />
+        <Logo className="h-12" />
       </Link>
       <ul className="flex items-center space-x-4">
         <li>
-          <Link
-            className="uppercase font-sans font-normal text-gray-blue p-2 border-b text-sm"
-            activeClassName="border-gray-blue"
-            to="/"
-          >
+          <Link className={styles.headerLink} activeClassName={styles.active} to="/">
             Item
           </Link>
         </li>
         <li>
-          <Link
-            className="uppercase font-sans font-normal text-gray-blue p-2 border-b text-sm"
-            activeClassName="border-gray-blue"
-            to="/"
-          >
+          <Link className={styles.headerLink} activeClassName={styles.active} to="/blah">
             Item
           </Link>
         </li>
         <li>
-          <Link
-            className="uppercase font-sans font-normal text-gray-blue p-2 border-b text-sm"
-            activeClassName="border-gray-blue"
-            to="/"
-          >
+          <Link className={styles.headerLink} activeClassName={styles.active} to="/blergh">
             Item
           </Link>
         </li>
         <li>
-          <Link
-            className="uppercase font-sans font-normal text-gray-blue p-2 border-b text-sm"
-            activeClassName="border-gray-blue"
-            to="/"
-          >
+          <Link className={styles.headerLink} activeClassName={styles.active} to="/okay">
             Item
           </Link>
         </li>
