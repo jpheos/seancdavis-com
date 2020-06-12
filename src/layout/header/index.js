@@ -10,6 +10,8 @@ import fixture from "./fixture"
 import Button from "../../components/button"
 import Logo from "../../components/logo"
 
+// TODO: Separate mobile and desktop menus as their own components.
+
 const Header = () => {
   const [menuActive, setMenuActive] = useState(false)
 
@@ -54,7 +56,7 @@ const Header = () => {
         <div className={classNames(styles.mobileMenu, { [styles.active]: menuActive })}>
           <div className={`container ${styles.mobileHeader}`}>
             <Link to="/">
-              <Logo className="h-12" />
+              <Logo className="h-12" theme="white" />
             </Link>
             <button onClick={handleMenuTriggerClick} className="text-white">
               close

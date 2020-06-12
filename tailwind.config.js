@@ -19,7 +19,7 @@ module.exports = {
           light: "#eef1f5"
         },
         green: {
-          default: "#2260bf"
+          default: "#008291"
         },
         lime: "#9ce736",
         orange: "#ff6b00",

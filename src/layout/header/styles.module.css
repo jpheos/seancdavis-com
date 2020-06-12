@@ -34,6 +34,7 @@
     fixed
     h-screen
     left-0
+    overflow-y-scroll
     transition-all
     w-screen;
 
@@ -54,8 +55,9 @@
       flex
       items-center
       justify-between
+      mb-8
       opacity-0
-      py-12
+      py-4
       text-center
       transition-all;
   }
@@ -74,7 +76,7 @@
 
   .mobileLink {
     @apply p-2
-      text-5xl
+      text-2xl
       text-white;
 
     border-bottom: 1px solid transparent;

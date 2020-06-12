@@ -18,7 +18,7 @@ Button.propTypes = {
   /**
    * Controls the colors of the button.
    */
-  theme: PropTypes.oneOf(["default", "outline"]),
+  theme: PropTypes.oneOf(["default", "outline", "outline_white"]),
   /**
    * Where the button should link.
    */
