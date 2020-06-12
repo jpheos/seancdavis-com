@@ -1,25 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
+import classNames from "classnames/bind"
 
-const btnClasses = theme => `
-  bg-${theme === "outline" ? "transparent" : "blue"}
-  border
-  border-blue
-  duration-500
-  font-sans
-  hover:bg-${theme === "outline" ? "blue" : "blue-dark"}
-  hover:text-white
-  inline-block
-  px-8
-  py-3
-  text-sm
-  text-${theme === "outline" ? "blue" : "white"}
-  transition-all
-  uppercase
-`
+import styles from "./styles.module.css"
 
 const Button = ({ children, theme, to }) => (
-  <a className={btnClasses(theme)} href={to}>
+  <a className={classNames(styles.button, styles[`theme_${theme}`])} href={to}>
     {children}
   </a>
 )

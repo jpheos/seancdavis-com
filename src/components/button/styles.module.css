@@ -1,0 +1,41 @@
+.button {
+  @apply bg-blue
+    border
+    border-blue
+    duration-500
+    font-sans
+    inline-block
+    px-8
+    py-3
+    text-sm
+    text-white
+    transition-all
+    uppercase;
+
+  &:hover {
+    @apply bg-blue-dark
+      text-white;
+  }
+
+  &.theme_outline {
+    @apply bg-transparent
+      text-blue;
+
+    &:hover {
+      @apply bg-blue
+        text-white;
+    }
+  }
+
+  &.theme_outline_white {
+    @apply bg-transparent
+      border-white
+      text-white;
+
+    &:hover {
+      @apply bg-transparent
+        opacity-50
+        text-white;
+    }
+  }
+}

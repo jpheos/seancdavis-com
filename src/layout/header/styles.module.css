@@ -1,4 +1,4 @@
-.headerLink {
+.desktopLink {
   @apply font-bold
     font-sans
     p-2
@@ -24,5 +24,63 @@
   &:hover:before,
   &.active:before {
     width: 100%;
+  }
+}
+
+.mobileMenu {
+  @apply bg-gray-blue
+    duration-300
+    ease-in-out
+    fixed
+    h-screen
+    left-0
+    transition-all
+    w-screen;
+
+  top: -100vh;
+
+  &.active {
+    @apply top-0;
+
+    .mobileHeader,
+    .mobileLinkList {
+      @apply opacity-100;
+    }
+  }
+
+  .mobileHeader {
+    @apply delay-500
+      duration-1000
+      flex
+      items-center
+      justify-between
+      opacity-0
+      py-12
+      text-center
+      transition-all;
+  }
+
+  .mobileLinkList {
+    @apply delay-300
+      duration-1000
+      opacity-0
+      text-center
+      transition-all;
+
+    li {
+      @apply mb-8;
+    }
+  }
+
+  .mobileLink {
+    @apply p-2
+      text-5xl
+      text-white;
+
+    border-bottom: 1px solid transparent;
+
+    &.active {
+      @apply border-white;
+    }
   }
 }
