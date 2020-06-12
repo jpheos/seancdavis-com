@@ -35,7 +35,9 @@ const Header = () => (
           </Link>
         </li>
         <li>
-          <Button to="/">CTA Item</Button>
+          <Button to="/" theme="outline">
+            CTA Item
+          </Button>
         </li>
       </ul>
     </div>
