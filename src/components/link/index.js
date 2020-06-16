@@ -64,7 +64,7 @@ InternalLink.propTypes = {
   /**
    * Text or elements to render inside the link.
    */
-  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
+  children: PropTypes.node.isRequired,
   /**
    * The "class" attribute that gets passed to Gatsby's <Link /> component.
    */
@@ -97,7 +97,7 @@ ExternalLink.propTypes = {
   /**
    * Text or elements to render inside the link.
    */
-  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
+  children: PropTypes.node.isRequired,
   /**
    * The "class" attribute of the anchor.
    */
@@ -124,7 +124,7 @@ const Link = props =>
 Link.propTypes = {
   activeClassName: PropTypes.string,
   activeStyle: PropTypes.object,
-  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
+  children: PropTypes.node.isRequired,
   className: PropTypes.string,
   target: PropTypes.string,
   to: PropTypes.string.isRequired,

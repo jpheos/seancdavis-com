@@ -4,7 +4,7 @@ import GatsbyImage from "gatsby-image"
 import PropTypes from "prop-types"
 import lodash from "lodash"
 
-const Image = ({ filename }) => {
+const Image = ({ filename, ...props }) => {
   return (
     <StaticQuery
       query={graphql`
@@ -23,7 +23,7 @@ const Image = ({ filename }) => {
         const images = data.images.edges.map(({ node }) => node)
         const image = images.filter(img => img.filename === filename)[0]
         if (!lodash.get(image, "childImageSharp.fluid")) return null
-        return <GatsbyImage fluid={image.childImageSharp.fluid} />
+        return <GatsbyImage fluid={image.childImageSharp.fluid} {...props} />
       }}
     />
   )

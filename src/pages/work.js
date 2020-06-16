@@ -22,6 +22,22 @@ const MyWorkPage = ({ data }) => {
             title="Lorem ipsum sil dolor Rhoncus Amet fili sed xerunt"
             image="fpo-image.jpg"
             subtitle="March 31, 2020"
+            to="/work"
+          />
+          <Card
+            title="Lorem ipsum sil dolor Rhoncus Amet fili sed xerunt"
+            theme="featured"
+            image="fpo-image.jpg"
+            subtitle="March 31, 2020"
+            to="/work"
+          />
+          <Card
+            title="Lorem ipsum sil dolor Rhoncus Amet fili sed xerunt"
+            theme="horizontal"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus odio justo, aliquam non vulputate quis xerunt."
+            image="fpo-image.jpg"
+            subtitle="March 31, 2020"
+            to="/work"
           />
         </div>
       </div>

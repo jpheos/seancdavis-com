@@ -1,0 +1,57 @@
+.cardLink {
+  @apply block
+    duration-300
+    relative
+    transform
+    transition-all;
+
+  &:hover {
+    @apply scale-105
+      z-10;
+  }
+}
+
+.cardImage {
+  @apply w-full;
+
+  height: 126px;
+}
+
+.cardContent {
+  @apply bg-white
+        p-4;
+}
+
+.cardTitle {
+  @apply text-black
+    text-xl;
+}
+
+/* ---------------------------------------- | Themes */
+
+.theme_featured {
+  .cardImage {
+    height: 196px;
+  }
+  .cardTitle {
+    @apply text-3xl;
+  }
+}
+
+.theme_horizontal {
+  @apply flex
+    items-stretch;
+
+  .cardImage {
+    @apply h-auto
+        w-1/2;
+  }
+
+  .cardContent {
+    @apply w-1/2;
+  }
+
+  .cardTitle {
+    @apply text-2xl;
+  }
+}
