@@ -5,6 +5,17 @@ module.exports = {
     author: `@gatsbyjs`
   },
   plugins: [
+    /**
+     * Creates playgrounds from .mdx files in src/templates and src/components.
+     * Pulled from Ample's starter kit and adjusted for this project. Lives in
+     * plugins directory.
+     */
+    {
+      resolve: `gatsby-plugin-playgrounds`,
+      options: {
+        disable: process.env.GATSBY_PLAYGROUND_DISABLED === "true"
+      }
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

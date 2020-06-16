@@ -1,17 +1,15 @@
 import React from "react"
-import PropTypes from "prop-types"
+// import PropTypes from "prop-types"
 // import { Link } from "gatsby"
 
 import Layout from "../layout"
 
-import Button from "../components/button"
+// import Button from "../components/button"
 import Card from "../components/card"
 // import Image from "../components/image"
 // import SEO from "../components/seo"
 
 const MyWorkPage = ({ data }) => {
-  console.log(data)
-
   return (
     <Layout>
       <div className="bg-gray-light p-12">
