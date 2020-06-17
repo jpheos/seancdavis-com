@@ -1,5 +1,6 @@
 .cardLink {
-  @apply block
+  @apply bg-white
+    block
     duration-300
     relative
     transform
@@ -11,15 +12,18 @@
   }
 }
 
-.cardImage {
+.cardImageWrapper {
   @apply w-full;
 
   height: 126px;
 }
 
+.cardImage {
+  @apply h-full;
+}
+
 .cardContent {
-  @apply bg-white
-        p-4;
+  @apply p-4;
 }
 
 .cardTitle {
@@ -30,7 +34,7 @@
 /* ---------------------------------------- | Themes */
 
 .theme_featured {
-  .cardImage {
+  .cardImageWrapper {
     height: 196px;
   }
   .cardTitle {
@@ -42,9 +46,18 @@
   @apply flex
     items-stretch;
 
-  .cardImage {
+  .cardImageWrapper {
     @apply h-auto
-        w-1/2;
+      relative;
+
+    width: 50%;
+  }
+
+  .cardImage {
+    @apply top-0
+      w-full;
+
+    position: absolute !important;
   }
 
   .cardContent {

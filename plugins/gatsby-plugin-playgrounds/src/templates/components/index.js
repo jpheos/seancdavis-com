@@ -16,11 +16,13 @@ const ComponentsPlayground = ({ pageContext }) => {
   ))
 
   return (
-    <div className="container">
-      <Helmet>
-        <title>Components | Ample Playground</title>
-      </Helmet>
-      {components}
+    <div className="bg-gray-light py-12">
+      <div className="container">
+        <Helmet>
+          <title>Components | Ample Playground</title>
+        </Helmet>
+        {components}
+      </div>
     </div>
   )
 }

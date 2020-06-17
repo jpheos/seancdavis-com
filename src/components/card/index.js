@@ -12,7 +12,9 @@ const Card = ({ className, description, image, subtitle, theme, title, to }) => 
 
   return (
     <Link to={to} className={cardClasses}>
-      <Image filename={image} className={styles.cardImage} />
+      <div className={styles.cardImageWrapper}>
+        <Image filename={image} className={styles.cardImage} />
+      </div>
       <div className={styles.cardContent}>
         <h2 className={styles.cardTitle}>{title}</h2>
         {description && (
