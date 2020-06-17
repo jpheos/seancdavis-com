@@ -7,8 +7,8 @@ import Link from "../link"
 
 import styles from "./styles.module.css"
 
-const Card = ({ description, image, subtitle, theme, title, to }) => {
-  const cardClasses = classNames(styles.cardLink, { [styles[`theme_${theme}`]]: theme })
+const Card = ({ className, description, image, subtitle, theme, title, to }) => {
+  const cardClasses = classNames(className, styles.cardLink, { [styles[`theme_${theme}`]]: theme })
 
   return (
     <Link to={to} className={cardClasses}>
@@ -27,6 +27,10 @@ const Card = ({ description, image, subtitle, theme, title, to }) => {
 }
 
 Card.propTypes = {
+  /**
+   * CSS classes to apply to wrapping element.
+   */
+  className: PropTypes.string,
   /**
    * Text to display between title and subtitle.
    */
