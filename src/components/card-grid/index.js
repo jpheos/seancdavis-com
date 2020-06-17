@@ -11,7 +11,9 @@ const CardGrid = ({ cards }) => {
         card = {
           ...card,
           key: idx,
-          className: classNames(card.className, { ["md:col-span-2"]: card.theme === "horizontal" })
+          className: classNames(card.className, {
+            "md:col-span-2": card.theme === "horizontal"
+          })
         }
         return <Card {...card} />
       })}
