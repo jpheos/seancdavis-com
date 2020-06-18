@@ -55,7 +55,10 @@ exports.createPages = ({ graphql, actions }, pluginOptions = {}) => {
     actions.createPage({
       path: `/${templatePathPrefix}`,
       component: path.join(__dirname, "./src/templates/template-list/index.js"),
-      context: { pathPrefix: templatePathPrefix }
+      context: {
+        pathPrefix: templatePathPrefix,
+        templates: result.data.templates.edges.map(({ node }) => node)
+      }
     })
 
     // Create components playground.
