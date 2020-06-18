@@ -4,12 +4,14 @@ import PropTypes from "prop-types"
 import "normalize.css"
 import "./styles.css"
 
+import Footer from "./footer"
 import Header from "./header"
 
 const Layout = ({ children }) => (
   <>
     <Header />
     {children}
+    <Footer />
   </>
 )
 
