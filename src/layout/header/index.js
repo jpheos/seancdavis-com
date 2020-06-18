@@ -1,13 +1,14 @@
 import React, { useState } from "react"
 // import PropTypes from "prop-types"
-import { Link } from "gatsby"
 import classNames from "classnames/bind"
+import lodash from "lodash"
 
 import styles from "./styles.module.css"
 
-import fixture from "./fixture"
+import config from "../../content/config/header"
 
 import Button from "../../components/button"
+import Link from "../../components/link"
 import Logo from "../../components/logo"
 
 // TODO: Separate mobile and desktop menus as their own components.
@@ -29,20 +30,19 @@ const Header = () => {
         {/* --- Desktop Menu --- */}
 
         <ul className="items-center space-x-4 hidden lg:flex">
-          {/* Links */}
-          {fixture.links.map((link, idx) => (
+          {config.links.map((link, idx) => (
             <li key={idx}>
-              <Link className={styles.desktopLink} activeClassName={styles.active} to={link.url}>
-                {link.label}
-              </Link>
+              {lodash.get(link, "theme.desktop") ? (
+                <Button to={link.url} theme={lodash.get(link, "theme.desktop")}>
+                  {link.label}
+                </Button>
+              ) : (
+                <Link className={styles.desktopLink} activeClassName={styles.active} to={link.url}>
+                  {link.label}
+                </Link>
+              )}
             </li>
           ))}
-          {/* Button */}
-          <li>
-            <Button to={fixture.button.url} theme="outline">
-              {fixture.button.label}
-            </Button>
-          </li>
         </ul>
 
         {/* --- Mobile Menu Trigger --- */}
@@ -63,20 +63,19 @@ const Header = () => {
             </button>
           </div>
           <ul className={`container ${styles.mobileLinkList}`}>
-            {/* Links */}
-            {fixture.links.map((link, idx) => (
+            {config.links.map((link, idx) => (
               <li key={idx}>
-                <Link className={styles.mobileLink} activeClassName={styles.active} to={link.url}>
-                  {link.label}
-                </Link>
+                {lodash.get(link, "theme.mobile") ? (
+                  <Button to={link.url} theme={lodash.get(link, "theme.mobile")}>
+                    {link.label}
+                  </Button>
+                ) : (
+                  <Link className={styles.mobileLink} activeClassName={styles.active} to={link.url}>
+                    {link.label}
+                  </Link>
+                )}
               </li>
             ))}
-            {/* Button */}
-            <li>
-              <Button to={fixture.button.url} theme="outline_white">
-                {fixture.button.label}
-              </Button>
-            </li>
           </ul>
         </div>
       </div>
