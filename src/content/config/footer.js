@@ -17,7 +17,6 @@
  * }
  *
  */
-
 const menus = [
   {
     heading: "Social",
