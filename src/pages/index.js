@@ -4,11 +4,30 @@ import React from "react"
 import Layout from "../layout"
 
 import Button from "../components/button"
-// import Image from "../components/image"
+import Image from "../components/image"
 // import SEO from "../components/seo"
+
+import styles from "./styles.module.css"
 
 const IndexPage = () => (
   <Layout>
+    {/* Jumbotron */}
+    <div className="py-32">
+      <div className="flex container items-center">
+        <div className="max-w-lg mr-16">
+          <h1 className={styles.jumbotron_heading}>
+            <span>Sean</span>
+            <span>C Davis.</span>
+          </h1>
+          <p className="text-2xl">Interactive text here ...</p>
+        </div>
+        <div className={styles.jumbotron_image}>
+          <Image filename="fpo-image.jpg" />
+        </div>
+      </div>
+    </div>
+
+    <hr />
     <h1>Hi people</h1>
     <Button to="/">Hello World</Button>
     <p>

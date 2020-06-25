@@ -1,0 +1,20 @@
+.jumbotron_heading {
+  @apply mb-4;
+
+  font-size: 6rem;
+
+  span {
+    @apply block;
+
+    background: linear-gradient(153deg, #01a791, #1d5fc1);
+    line-height: 1;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.jumbotron_image {
+  @apply h-full;
+
+  width: 20rem;
+}
