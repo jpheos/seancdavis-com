@@ -1,7 +1,20 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+exports.onRouteUpdate = ({ location }) => scrollToAnchor(location)
 
-// You can delete this file if you're not using it
+/**
+ * Smooth scroll to position of hash on page load.
+ */
+function scrollToAnchor(location, mainNavHeight = 0) {
+  if (location && location.hash) {
+    const item = document.querySelector(`${location.hash}`)
+    if (!item) return
+
+    const itemTop = item.offsetTop
+
+    window.scrollTo({
+      top: itemTop - mainNavHeight,
+      behavior: "smooth"
+    })
+  }
+
+  return true
+}
