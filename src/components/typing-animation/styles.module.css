@@ -1,0 +1,26 @@
+@keyframes blink {
+  from,
+  to {
+    background-color: black;
+  }
+  50% {
+    background-color: transparent;
+  }
+}
+
+.cursor {
+  @apply absolute
+    bg-black
+    h-full
+    inline-block
+    top-0;
+
+  width: 2px;
+
+  &.isBlinking {
+    animation-direction: step-end;
+    animation-duration: 1.25s;
+    animation-iteration-count: infinite;
+    animation-name: blink;
+  }
+}
