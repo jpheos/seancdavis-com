@@ -4,6 +4,21 @@ import classNames from "classnames"
 
 import styles from "./styles.module.css"
 
+// TODO: Highlight right before delete
+// TODO: Refactor the code
+// TODO: Add comments
+// TODO: Accept durations as props
+
+/**
+ * TODO: Consider if typing duration should be identical for each character and
+ * not based on the length of the word. Then set the length of the restart based
+ * on how long we want to wait after the longest word.
+ *
+ * Another approach would be to use setTimeout for typing exclusively, so I have
+ * more fine-grained control on what the next action is, and the typing and
+ * pausing can be consistent and so can the duration of typing each character.
+ */
+
 const TypingAnimation = ({ text }) => {
   const [visibleText, setVisibleText] = useState("")
   const [cursorIsBlinking, setCursorIsBlinking] = useState(true)

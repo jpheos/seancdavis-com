@@ -5,6 +5,7 @@ import Layout from "../layout"
 
 import Button from "../components/button"
 import Image from "../components/image"
+import TypingAnimation from "../components/typing-animation"
 // import SEO from "../components/seo"
 
 import styles from "./styles.module.css"
@@ -19,7 +20,10 @@ const IndexPage = () => (
             <span>Sean</span>
             <span>C Davis.</span>
           </h1>
-          <p className="text-2xl">Interactive text here ...</p>
+          <p className="text-4xl">
+            I am a&nbsp;
+            <TypingAnimation text={["tinkerer", "developer", "teacher"]} />.
+          </p>
         </div>
         <div className={styles.jumbotron_image}>
           <Image filename="fpo-image.jpg" />
