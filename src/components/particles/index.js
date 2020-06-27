@@ -52,7 +52,6 @@ const Particles = () => {
     }
 
     let dots = [...Array(10)].map(initDot)
-    console.log(dots)
 
     const move = () => {
       context.clearRect(0, 0, canvasWidth, canvasHeight)
@@ -68,7 +67,7 @@ const Particles = () => {
         if (dot.position.y + dot.radius >= canvasHeight) dot.move.y = "-"
         if (dot.position.y - dot.radius <= 0) dot.move.y = "+"
 
-        drawDot(dot)
+        return drawDot(dot)
       })
 
       window.requestAnimationFrame(move)
@@ -77,7 +76,13 @@ const Particles = () => {
     move()
   }, [])
 
-  return <canvas ref={canvasRef} className="h-full w-full top-0 left-0 absolute" />
+  return (
+    <canvas
+      ref={canvasRef}
+      aria-label="Particles Canvas"
+      className="h-full w-full top-0 left-0 absolute"
+    />
+  )
 }
 
 Particles.propTypes = {}
