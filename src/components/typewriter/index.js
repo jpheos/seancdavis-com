@@ -4,7 +4,7 @@ import classNames from "classnames"
 
 import styles from "./styles.module.css"
 
-const TextTyper = ({
+const Typewriter = ({
   blankDuration,
   characterDuration,
   highlightDuration,
@@ -145,7 +145,7 @@ const TextTyper = ({
   )
 }
 
-TextTyper.propTypes = {
+Typewriter.propTypes = {
   /**
    * Amount of time (ms) between deleting the current text and typing the next
    * text.
@@ -171,7 +171,7 @@ TextTyper.propTypes = {
   viewDuration: PropTypes.number.isRequired
 }
 
-TextTyper.defaultProps = {
+Typewriter.defaultProps = {
   blankDuration: 250,
   characterDuration: 75,
   highlightDuration: 250,
@@ -179,4 +179,4 @@ TextTyper.defaultProps = {
   viewDuration: 2000
 }
 
-export default TextTyper
+export default Typewriter
