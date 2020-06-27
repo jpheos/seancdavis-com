@@ -4,87 +4,80 @@ import classNames from "classnames"
 
 import styles from "./styles.module.css"
 
-// TODO: Highlight right before delete
-// TODO: Refactor the code
 // TODO: Add comments
 // TODO: Accept durations as props
 
-/**
- * TODO: Consider if typing duration should be identical for each character and
- * not based on the length of the word. Then set the length of the restart based
- * on how long we want to wait after the longest word.
- *
- * Another approach would be to use setTimeout for typing exclusively, so I have
- * more fine-grained control on what the next action is, and the typing and
- * pausing can be consistent and so can the duration of typing each character.
- */
-
 const TypingAnimation = ({ text }) => {
   const [visibleText, setVisibleText] = useState("")
-  const [cursorIsBlinking, setCursorIsBlinking] = useState(true)
+  const [isBlinking, setIsBlinking] = useState(true)
   const [isHighlighted, setIsHighlighted] = useState(false)
 
   useEffect(() => {
-    let typingInterval, blinkingTimeout, highlightTimeout, blankTimeout
-
-    const typingDuration = 1000
-    const viewDuration = 1500
+    const charTypingDuration = 75
+    const viewDuration = 2000
     const highlightDuration = 250
     const blankDuration = 250
 
-    const totalTextDuration = typingDuration + viewDuration + highlightDuration + blankDuration
-    const highlightStartsAt = typingDuration + viewDuration
-    const blankStartsAt = totalTextDuration - blankDuration
-
     let currentIdx = -1
 
-    const textInterval = () => {
+    const resetCycle = () => {
+      setIsBlinking(false)
+      setVisibleText("")
+      setIsHighlighted(false)
+      textCycle()
+    }
+
+    const textCycle = () => {
+      clearTimeout(nextTimeout)
+
       currentIdx++
       if (currentIdx === text.length) currentIdx = 0
 
-      clearInterval(typingInterval)
-      setIsHighlighted(false)
-      setCursorIsBlinking(false)
-
       const currentTextChars = text[currentIdx].split("")
-      const charIntLength = typingDuration / currentTextChars.length
 
-      let activeCharIdx = 0
+      typeChar(currentTextChars, 0)
+    }
 
-      const typeChar = () => {
-        activeCharIdx++
-        setVisibleText(currentTextChars.slice(0, activeCharIdx))
+    const typeChar = (currentTextChars, idx) => {
+      clearTimeout(nextTimeout)
+
+      if (idx === currentTextChars.length) {
+        setIsBlinking(true)
+        nextTimeout = setTimeout(highlight, viewDuration)
+        return
       }
 
-      typeChar()
-      typingInterval = setInterval(typeChar, charIntLength)
+      setVisibleText(currentTextChars.slice(0, idx).join(""))
 
-      highlightTimeout = setTimeout(() => {
-        setIsHighlighted(true)
-        clearInterval(typingInterval)
-      }, highlightStartsAt)
-
-      blankTimeout = setTimeout(() => setVisibleText(""), blankStartsAt)
-
-      blinkingTimeout = setTimeout(() => setCursorIsBlinking(true), typingDuration)
+      nextTimeout = setTimeout(() => typeChar(currentTextChars, idx + 1), charTypingDuration)
     }
 
-    textInterval()
-    const primaryInterval = setInterval(textInterval, totalTextDuration)
+    const highlight = () => {
+      clearTimeout(nextTimeout)
 
-    return () => {
-      clearInterval(typingInterval)
-      clearTimeout(blinkingTimeout)
-      clearTimeout(highlightTimeout)
-      clearTimeout(blankTimeout)
-      clearInterval(primaryInterval)
+      setIsHighlighted(true)
+
+      return (nextTimeout = setTimeout(deleteText, highlightDuration))
     }
+
+    const deleteText = () => {
+      clearTimeout(nextTimeout)
+
+      setVisibleText("")
+      setIsHighlighted(false)
+
+      nextTimeout = setTimeout(resetCycle, blankDuration)
+    }
+
+    let nextTimeout = setTimeout(resetCycle, 0)
+
+    return () => clearTimeout(nextTimeout)
   }, [])
 
   return (
     <span className={classNames(styles.wrapper, { [styles.isHighlighted]: isHighlighted })}>
-      <span className="inline-block">{visibleText}</span>
-      <span className={classNames(styles.cursor, { [styles.isBlinking]: cursorIsBlinking })} />
+      <span className="inline-block">{visibleText.replace(/ /g, "\u00a0")}</span>
+      <span className={classNames(styles.cursor, { [styles.isBlinking]: isBlinking })} />
     </span>
   )
 }
