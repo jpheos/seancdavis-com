@@ -4,7 +4,7 @@ import classNames from "classnames"
 
 import styles from "./styles.module.css"
 
-const TypingAnimation = ({
+const TextTyper = ({
   blankDuration,
   characterDuration,
   highlightDuration,
@@ -145,7 +145,7 @@ const TypingAnimation = ({
   )
 }
 
-TypingAnimation.propTypes = {
+TextTyper.propTypes = {
   /**
    * Amount of time (ms) between deleting the current text and typing the next
    * text.
@@ -171,7 +171,7 @@ TypingAnimation.propTypes = {
   viewDuration: PropTypes.number.isRequired
 }
 
-TypingAnimation.defaultProps = {
+TextTyper.defaultProps = {
   blankDuration: 250,
   characterDuration: 75,
   highlightDuration: 250,
@@ -179,4 +179,4 @@ TypingAnimation.defaultProps = {
   viewDuration: 2000
 }
 
-export default TypingAnimation
+export default TextTyper

@@ -6,7 +6,7 @@ import Layout from "../layout"
 
 import Button from "../components/button"
 import Image from "../components/image"
-import TypingAnimation from "../components/typing-animation"
+import TextTyper from "../components/text-typer"
 // import SEO from "../components/seo"
 
 import styles from "./styles.module.css"
@@ -39,7 +39,7 @@ const IndexPage = () => {
               <span>C Davis.</span>
             </h1>
             <p className="text-4xl">
-              <TypingAnimation texts={hats} />
+              <TextTyper texts={hats} />
             </p>
           </div>
           <div className={styles.jumbotron_image}>
