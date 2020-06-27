@@ -1,10 +1,22 @@
 @keyframes blink {
   from,
   to {
-    background-color: black;
+    @apply bg-black;
   }
   50% {
-    background-color: transparent;
+    @apply bg-transparent;
+  }
+}
+
+.wrapper {
+  @apply inline-block
+    relative;
+
+  padding-right: 2px;
+
+  &.isHighlighted {
+    @apply bg-black;
+    @apply text-white;
   }
 }
 
@@ -13,6 +25,7 @@
     bg-black
     h-full
     inline-block
+    right-0
     top-0;
 
   width: 2px;

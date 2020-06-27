@@ -22,14 +22,19 @@ import styles from "./styles.module.css"
 const TypingAnimation = ({ text }) => {
   const [visibleText, setVisibleText] = useState("")
   const [cursorIsBlinking, setCursorIsBlinking] = useState(true)
+  const [isHighlighted, setIsHighlighted] = useState(false)
 
   useEffect(() => {
-    let typingInterval, blinkingTimeout
+    let typingInterval, blinkingTimeout, highlightTimeout, blankTimeout
 
     const typingDuration = 1000
-    const restartDelay = 2000
+    const viewDuration = 1500
+    const highlightDuration = 250
+    const blankDuration = 250
 
-    const totalTextDuration = typingDuration + restartDelay
+    const totalTextDuration = typingDuration + viewDuration + highlightDuration + blankDuration
+    const highlightStartsAt = typingDuration + viewDuration
+    const blankStartsAt = totalTextDuration - blankDuration
 
     let currentIdx = -1
 
@@ -38,6 +43,7 @@ const TypingAnimation = ({ text }) => {
       if (currentIdx === text.length) currentIdx = 0
 
       clearInterval(typingInterval)
+      setIsHighlighted(false)
       setCursorIsBlinking(false)
 
       const currentTextChars = text[currentIdx].split("")
@@ -53,6 +59,13 @@ const TypingAnimation = ({ text }) => {
       typeChar()
       typingInterval = setInterval(typeChar, charIntLength)
 
+      highlightTimeout = setTimeout(() => {
+        setIsHighlighted(true)
+        clearInterval(typingInterval)
+      }, highlightStartsAt)
+
+      blankTimeout = setTimeout(() => setVisibleText(""), blankStartsAt)
+
       blinkingTimeout = setTimeout(() => setCursorIsBlinking(true), typingDuration)
     }
 
@@ -62,12 +75,14 @@ const TypingAnimation = ({ text }) => {
     return () => {
       clearInterval(typingInterval)
       clearTimeout(blinkingTimeout)
+      clearTimeout(highlightTimeout)
+      clearTimeout(blankTimeout)
       clearInterval(primaryInterval)
     }
   }, [])
 
   return (
-    <span className="relative">
+    <span className={classNames(styles.wrapper, { [styles.isHighlighted]: isHighlighted })}>
       <span className="inline-block">{visibleText}</span>
       <span className={classNames(styles.cursor, { [styles.isBlinking]: cursorIsBlinking })} />
     </span>
