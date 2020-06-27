@@ -1,15 +1,9 @@
 import faker from "faker"
 
+const mockText = () => `${faker.lorem.words()}.`
+
 export default {
   default: {
-    text: [
-      faker.lorem.words(),
-      faker.lorem.words(),
-      faker.lorem.words(),
-      faker.lorem.words(),
-      faker.lorem.words(),
-      faker.lorem.words(),
-      faker.lorem.words()
-    ]
+    texts: [...Array(8)].map(mockText)
   }
 }

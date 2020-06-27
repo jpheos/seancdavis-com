@@ -22,7 +22,7 @@ const IndexPage = () => (
           </h1>
           <p className="text-4xl">
             I am a&nbsp;
-            <TypingAnimation text={["tinkerer", "developer", "teacher"]} />.
+            <TypingAnimation texts={["tinkerer", "developer", "teacher"]} />.
           </p>
         </div>
         <div className={styles.jumbotron_image}>
