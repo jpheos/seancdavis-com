@@ -6,7 +6,7 @@ import Layout from "../layout"
 
 import Button from "../components/button"
 import Image from "../components/image"
-import Typewriter from "../components/text-typer"
+import Typewriter from "../components/typewriter"
 // import SEO from "../components/seo"
 
 import styles from "./styles.module.css"
