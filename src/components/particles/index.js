@@ -2,9 +2,13 @@ import React, { useEffect, useRef } from "react"
 import PropTypes from "prop-types"
 import lodash from "lodash"
 
+import shapes from "./shapes"
+
 const Particles = ({ count }) => {
-  // A reference to the canvas HTML element.
+  // DOM reference to the canvas HTML element.
   const canvasRef = useRef()
+  // DOM reference to the shapes' source image.
+  const shapesRef = useRef([])
 
   /**
    * As the rendering portion of this component is just a canvas, this is the
@@ -24,12 +28,11 @@ const Particles = ({ count }) => {
     /**
      * Uses the parameters its given to render a particle to the canvas.
      */
-    const drawParticle = ({ fill, position, radius }) => {
+    const drawParticle = ({ image, position, radius }) => {
+      // Set the opacity of the image to give the appearance of layering.
       context.globalAlpha = 0.9
-      context.beginPath()
-      context.arc(position.x, position.y, radius, 0, 2 * Math.PI, false)
-      context.fillStyle = fill
-      context.fill()
+      // Draw the image.
+      context.drawImage(image, position.x - radius, position.y - radius, radius * 2, radius * 2)
     }
 
     /**
@@ -38,12 +41,11 @@ const Particles = ({ count }) => {
      * all particles move at different rates around the canvas.
      */
     const initParticle = () => {
-      // TODO: Make the particles and their colors random or configurable. For
-      // now the the particles all all uniform.
-      const radius = 5
+      const radius = lodash.random(5, 8)
 
       return {
-        fill: "#F03C69",
+        // Choose a random image from the source refs.
+        image: lodash.sample(shapesRef.current),
         // The move property controls the direction in which the particle is
         // moving. Plus is to the right or down, and minus is to the left or up.
         // When the particle hits the edge of the canvas, these properties are
@@ -64,8 +66,8 @@ const Particles = ({ count }) => {
         // each animation frame. Note that the speed is relative to the speed at
         // which each frame is rendered on the canvas.
         speed: {
-          x: lodash.random(0.01, 0.25),
-          y: lodash.random(0.01, 0.25)
+          x: lodash.random(0.01, 0.15),
+          y: lodash.random(0.01, 0.15)
         }
       }
     }
@@ -142,7 +144,14 @@ const Particles = ({ count }) => {
     return () => window.removeEventListener("resize", reset)
   }, [count])
 
-  return <canvas ref={canvasRef} aria-label="Particles Canvas" className="top-0 left-0 absolute" />
+  return (
+    <>
+      {Object.values(shapes).map((shape, idx) => (
+        <img key={idx} ref={el => (shapesRef.current[idx] = el)} src={shape} className="hidden" />
+      ))}
+      <canvas ref={canvasRef} aria-label="Particles Canvas" className="top-0 left-0 absolute" />
+    </>
+  )
 }
 
 Particles.propTypes = {
