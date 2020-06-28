@@ -16,18 +16,8 @@ const Particles = ({ count }) => {
     if (typeof window === "undefined") return
     // Quick reference to the canvas element in the DOM.
     let canvas = canvasRef.current
-    // Set the parent element's position to relative so that we can get its
-    // dimensions and then set the canvas's dimension to match.
-    const parentElement = canvas.parentElement
-    parentElement.style.position = "relative"
-    // Find the parent element's dimensions and store them as references. (We
-    // use them during the animation process.)
-    const canvasHeight = parentElement.clientHeight
-    const canvasWidth = parentElement.clientWidth
-    // Set the canvas width and height explicitly as attributes on the object.
-    // This is necessary for getting the particles to rendering properly.
-    canvas.setAttribute("height", canvasHeight)
-    canvas.setAttribute("width", canvasWidth)
+    // Shared variables, all of which are set in the init() function.
+    let parentElement, canvasHeight, canvasWidth
     // This is the context on which we draw.
     let context = canvas.getContext("2d")
 
@@ -122,11 +112,34 @@ const Particles = ({ count }) => {
       window.requestAnimationFrame(move)
     }
 
-    // Create the array of particles.
-    let particles = [...Array(count)].map(initParticle)
+    /**
+     * Resets shared values so other functions know the size of the container.
+     */
+    const reset = () => {
+      // Set the parent element's position to relative so that we can get its
+      // dimensions and then set the canvas's dimension to match.
+      parentElement = canvas.parentElement
+      parentElement.style.position = "relative"
+      // Find the parent element's dimensions and store them as references. (We
+      // use them during the animation process.)
+      canvasHeight = parentElement.clientHeight
+      canvasWidth = parentElement.clientWidth
+      // Set the canvas width and height explicitly as attributes on the object.
+      // This is necessary for getting the particles to rendering properly.
+      canvas.setAttribute("height", canvasHeight)
+      canvas.setAttribute("width", canvasWidth)
+    }
 
-    // Begin moving the particles.
+    // Set the shared values.
+    reset()
+    // Create the particles.
+    let particles = [...Array(count)].map(initParticle)
+    // Let's get the party started!
     move()
+
+    // Listen for window resizing.
+    window.addEventListener("resize", reset)
+    return () => window.removeEventListener("resize", reset)
   }, [count])
 
   return <canvas ref={canvasRef} aria-label="Particles Canvas" className="top-0 left-0 absolute" />
