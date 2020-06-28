@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1600px" height="900px" viewBox="0 0 1600 900" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>bg-jumbtron</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#A5B7D3" stop-opacity="0.12" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="bg-jumbtron" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="bottom" fill="#EAECED" points="1600 775 1600 900 0 900 0 76"></polygon>
+        <polygon id="top" fill="url(#linearGradient-1)" points="1600 0 1600 546 0 210 0 0"></polygon>
+    </g>
+</svg>

@@ -6,10 +6,13 @@ import Layout from "../layout"
 
 import Button from "../components/button"
 import Image from "../components/image"
+import Particles from "../components/particles"
 import Typewriter from "../components/typewriter"
 // import SEO from "../components/seo"
 
 import styles from "./styles.module.css"
+
+import jumbotronBg from "../images/bg-jumbotron.svg"
 
 const IndexPage = () => {
   let hats = lodash.shuffle([
@@ -31,8 +34,9 @@ const IndexPage = () => {
   return (
     <Layout>
       {/* Jumbotron */}
-      <div className="py-32">
-        <div className="flex container items-center">
+      <div className="py-32 bg-cover bg-center" style={{ backgroundImage: `url(${jumbotronBg})` }}>
+        <Particles count={15} />
+        <div className="flex container items-center relative">
           <div className="max-w-lg mr-16">
             <h1 className={styles.jumbotron_heading}>
               <span>Sean</span>
