@@ -147,7 +147,13 @@ const Particles = ({ count }) => {
   return (
     <>
       {Object.values(shapes).map((shape, idx) => (
-        <img key={idx} ref={el => (shapesRef.current[idx] = el)} src={shape} className="hidden" />
+        <img
+          key={idx}
+          ref={el => (shapesRef.current[idx] = el)}
+          src={shape}
+          alt={`Shape Ref #${idx + 1}`}
+          className="hidden"
+        />
       ))}
       <canvas ref={canvasRef} aria-label="Particles Canvas" className="top-0 left-0 absolute" />
     </>
