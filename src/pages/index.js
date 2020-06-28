@@ -34,7 +34,7 @@ const IndexPage = () => {
   return (
     <Layout>
       {/* Jumbotron */}
-      <div className="py-32 bg-cover bg-center" style={{ backgroundImage: `url(${jumbotronBg})` }}>
+      <div className={styles.jumbotron} style={{ backgroundImage: `url(${jumbotronBg})` }}>
         <Particles count={15} />
         <div className="flex container items-center relative">
           <div className="max-w-lg mr-16">

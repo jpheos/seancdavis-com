@@ -9,7 +9,7 @@ import DesktopNav from "./desktop-nav"
 import MobileNav from "./mobile-nav"
 
 const Header = () => (
-  <header className="py-4">
+  <header className="py-4 relative z-10">
     <div className="container flex justify-between items-center">
       {/* Logo */}
       <Link to="/">

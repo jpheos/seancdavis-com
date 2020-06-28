@@ -1,3 +1,12 @@
+.jumbotron {
+  @apply bg-center
+    bg-cover
+    pb-32;
+
+  margin-top: -5rem;
+  padding-top: 13rem;
+}
+
 .jumbotron_heading {
   @apply mb-4;
 
