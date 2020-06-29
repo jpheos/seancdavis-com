@@ -14,8 +14,6 @@ import Typewriter from "../components/typewriter"
 
 import styles from "./styles.module.css"
 
-import jumbotronBg from "../images/bg-jumbotron.svg"
-
 const IndexPage = () => {
   let hats = lodash.shuffle([
     "(aspiring) Breadmaker?",
@@ -47,7 +45,7 @@ const IndexPage = () => {
   return (
     <Layout>
       {/* Jumbotron */}
-      <div className={styles.jumbotron} style={{ backgroundImage: `url(${jumbotronBg})` }}>
+      <div className={styles.jumbotron}>
         <Particles count={15} />
         <div className="flex container items-center relative">
           <div className="max-w-lg mr-16">

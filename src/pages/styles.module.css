@@ -1,10 +1,29 @@
 .jumbotron {
-  @apply bg-bottom
-    bg-cover
-    pb-32;
+  @apply pb-32
+    relative;
 
   margin-top: -5rem;
   padding-top: 13rem;
+
+  &:before {
+    @apply absolute block left-0 top-0 w-full;
+
+    background: linear-gradient(90deg, rgba(165, 183, 211, 0.5), #ffffff);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 35%);
+    content: " ";
+    height: 60%;
+    z-index: -1;
+  }
+
+  &::after {
+    @apply absolute block left-0 bottom-0 w-full;
+
+    background: var(--color-gray);
+    clip-path: polygon(0 0, 100% 80%, 100% 100%, 0 100%);
+    content: " ";
+    height: 90%;
+    z-index: -2;
+  }
 }
 
 .jumbotron_heading {
