@@ -2,7 +2,7 @@
 
 exports[`Header renders correctly with no props 1`] = `
 <header
-  className="py-4"
+  className="py-4 relative z-10"
 >
   <div
     className="container flex justify-between items-center"

@@ -1,5 +1,5 @@
 .jumbotron {
-  @apply bg-center
+  @apply bg-bottom
     bg-cover
     pb-32;
 
