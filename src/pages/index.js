@@ -79,13 +79,9 @@ const IndexPage = () => {
         />
         <div className="container py-24 max-w-4xl relative">
           <div className="max-w-md">
-            <h3 className="font-sans font-bold uppercase mb-2 text-green text-xs md:text-sm">
-              About Me
-            </h3>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl leading-tight mb-4">
-              Snappy headline about yourself
-            </h2>
-            <p className="md:text-xl mb-4">
+            <h3 className="subheading">About Me</h3>
+            <h2 className="section-heading">Snappy headline about yourself</h2>
+            <p className="md:text-xl">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus odio justo, aliquam
               non vulputate. Lorem ipsum sil dolor rhoncus amet fili sed erimus alta laguna.
             </p>
@@ -95,6 +91,55 @@ const IndexPage = () => {
                   <Icon name="circle" theme="bgCircle" />
                 </Link>
               ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* --- Quick Bio --- */}
+
+      <div className="bg-gray-light">
+        <div className="container py-24 max-w-4xl">
+          <div className="grid col-gap-4 grid-cols-2">
+            <div>
+              <h3 className="subheading">About Me</h3>
+              <h2 className="section-heading">Articles &amp; Thought Pieces</h2>
+            </div>
+          </div>
+          <div className="grid col-gap-4 grid-cols-2">
+            <div>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi est cumque ut,
+                voluptates tenetur accusantium vitae hic quae, aspernatur omnis, nesciunt
+                praesentium quo vero optio excepturi dicta sequi eius beatae.
+              </p>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi est cumque ut,
+                voluptates tenetur accusantium vitae hic quae, aspernatur omnis, nesciunt
+                praesentium quo vero optio excepturi dicta sequi eius beatae.
+              </p>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi est cumque ut,
+                voluptates tenetur accusantium vitae hic quae, aspernatur omnis, nesciunt
+                praesentium quo vero optio excepturi dicta sequi eius beatae.
+              </p>
+            </div>
+            <div>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi est cumque ut,
+                voluptates tenetur accusantium vitae hic quae, aspernatur omnis, nesciunt
+                praesentium quo vero optio excepturi dicta sequi eius beatae.
+              </p>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi est cumque ut,
+                voluptates tenetur accusantium vitae hic quae, aspernatur omnis, nesciunt
+                praesentium quo vero optio excepturi dicta sequi eius beatae.
+              </p>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi est cumque ut,
+                voluptates tenetur accusantium vitae hic quae, aspernatur omnis, nesciunt
+                praesentium quo vero optio excepturi dicta sequi eius beatae.
+              </p>
             </div>
           </div>
         </div>
