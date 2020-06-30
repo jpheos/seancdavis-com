@@ -51,12 +51,28 @@
 
 /* --- About Intro --- */
 
-.about_intro {
-  @apply bg-left
+.about_intro_bg_laptop {
+  @apply absolute
+    bg-left
     bg-no-repeat
-    relative;
+    hidden
+    h-full
+    left-0
+    top-0
+    w-full;
 
   background-size: auto calc(100% - 8rem);
+
+  @media (min-width: 720px) {
+    display: block;
+
+    transform: scaleX(-1);
+    filter: FlipH;
+  }
+
+  @media (min-width: 1300px) {
+    transform: scaleX(1);
+  }
 }
 
 .about_intro_bg_lines {

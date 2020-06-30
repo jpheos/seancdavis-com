@@ -1,4 +1,9 @@
 :root {
+  /* --breakpoint-sm: 640px; */
+  /* --breakpoint-md: 768px; */
+  /* --breakpoint-lg: 1024px; */
+  /* --breakpoint-xl: 1280px; */
+
   --color-black: #051c28;
   --color-blue-dark: #1d4a8f;
   --color-blue: #2260bf;

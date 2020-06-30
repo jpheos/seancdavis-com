@@ -68,7 +68,11 @@ const IndexPage = () => {
 
       {/* --- About Intro --- */}
 
-      <div className={styles.about_intro} style={{ backgroundImage: `url(${laptopGraphic})` }}>
+      <div className="relative">
+        <div
+          className={styles.about_intro_bg_laptop}
+          style={{ backgroundImage: `url(${laptopGraphic})` }}
+        />
         <div
           className={styles.about_intro_bg_lines}
           style={{ backgroundImage: `url(${laptopLines})` }}
