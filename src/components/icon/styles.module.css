@@ -1,7 +1,6 @@
 .icon {
   @apply text-blue
-    inline-block
-    w-6;
+    inline-block;
 
   svg {
     @apply h-auto
@@ -11,12 +10,5 @@
     path {
       fill: currentColor;
     }
-  }
-
-  &.bgCircle {
-    @apply bg-gray-light
-      p-2
-      rounded-full
-      w-12;
   }
 }

@@ -4,7 +4,7 @@ import lodash from "lodash"
 
 import Layout from "../layout"
 
-import Button from "../components/button"
+// import Button from "../components/button"
 import Icon from "../components/icon"
 import Image from "../components/image"
 import Link from "../components/link"
@@ -83,11 +83,7 @@ const IndexPage = () => {
             </p>
             <div>
               {socialLinks.map((link, idx) => (
-                <Link
-                  key={idx}
-                  to={link.url}
-                  className="inline-block mr-4 hover:opacity-75 transition-all duration-300"
-                >
+                <Link key={idx} to={link.url} className={styles.about_intro_icon}>
                   <Icon name="circle" theme="bgCircle" />
                 </Link>
               ))}
