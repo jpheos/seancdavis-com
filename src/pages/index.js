@@ -14,6 +14,9 @@ import Typewriter from "../components/typewriter"
 
 import styles from "./styles.module.css"
 
+import laptopGraphic from "../images/laptop-graphic.svg"
+import laptopLines from "../images/laptop-lines.svg"
+
 const IndexPage = () => {
   let hats = lodash.shuffle([
     "(aspiring) Breadmaker?",
@@ -65,24 +68,30 @@ const IndexPage = () => {
 
       {/* --- About Intro --- */}
 
-      <div className="container py-24">
-        <div className="max-w-md">
-          <h3 className="font-sans font-bold uppercase mb-2 text-green text-sm">About Me</h3>
-          <h2 className="text-5xl leading-tight mb-4">Snappy headline about yourself</h2>
-          <p className="text-xl mb-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus odio justo, aliquam
-            non vulputate. Lorem ipsum sil dolor rhoncus amet fili sed erimus alta laguna.
-          </p>
-          <div>
-            {socialLinks.map((link, idx) => (
-              <Link
-                key={idx}
-                to={link.url}
-                className="inline-block mr-4 hover:opacity-75 transition-all duration-300"
-              >
-                <Icon name="circle" theme="bgCircle" />
-              </Link>
-            ))}
+      <div className={styles.about_intro} style={{ backgroundImage: `url(${laptopGraphic})` }}>
+        <div
+          className={styles.about_intro_bg_lines}
+          style={{ backgroundImage: `url(${laptopLines})` }}
+        />
+        <div className="container py-24 max-w-4xl">
+          <div className="max-w-md">
+            <h3 className="font-sans font-bold uppercase mb-2 text-green text-sm">About Me</h3>
+            <h2 className="text-5xl leading-tight mb-4">Snappy headline about yourself</h2>
+            <p className="text-xl mb-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus odio justo, aliquam
+              non vulputate. Lorem ipsum sil dolor rhoncus amet fili sed erimus alta laguna.
+            </p>
+            <div>
+              {socialLinks.map((link, idx) => (
+                <Link
+                  key={idx}
+                  to={link.url}
+                  className="inline-block mr-4 hover:opacity-75 transition-all duration-300"
+                >
+                  <Icon name="circle" theme="bgCircle" />
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </div>

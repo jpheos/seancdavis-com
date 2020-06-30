@@ -1,3 +1,5 @@
+/* --- Jumbotron --- */
+
 .jumbotron {
   @apply pb-32
     relative;
@@ -45,4 +47,27 @@
   @apply h-full;
 
   width: 20rem;
+}
+
+/* --- About Intro --- */
+
+.about_intro {
+  @apply bg-left
+    bg-no-repeat
+    relative;
+
+  background-size: auto calc(100% - 8rem);
+}
+
+.about_intro_bg_lines {
+  @apply absolute
+    bg-center
+    bg-repeat-x
+    h-full
+    left-0
+    top-0
+    w-full;
+
+  background-size: auto calc(100% - 8rem);
+  z-index: -1;
 }
