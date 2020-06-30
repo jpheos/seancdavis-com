@@ -19,7 +19,7 @@
  */
 const menus = [
   {
-    heading: "Social",
+    heading: "Social Links",
     links: [
       {
         label: "Blog",

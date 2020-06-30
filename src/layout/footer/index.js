@@ -8,7 +8,7 @@ import Logo from "../../components/logo"
 const Footer = () => {
   return (
     <div className="bg-black text-white py-12">
-      <div className="container md:flex justify-between text-center md:text-left">
+      <div className="container max-w-4xl md:flex justify-between text-center md:text-left">
         <div className="md:max-w-xs mb-8">
           <Link to="/" className="inline-block w-12 mb-4">
             <Logo theme="white" />
