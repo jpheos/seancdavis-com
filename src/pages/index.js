@@ -77,7 +77,7 @@ const IndexPage = () => {
           className={styles.about_intro_bg_lines}
           style={{ backgroundImage: `url(${laptopLines})` }}
         />
-        <div className="container py-24 max-w-4xl">
+        <div className="container py-24 max-w-4xl relative">
           <div className="max-w-md">
             <h3 className="font-sans font-bold uppercase mb-2 text-green text-xs md:text-sm">
               About Me
