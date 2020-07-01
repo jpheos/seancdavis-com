@@ -11,6 +11,14 @@ module.exports = {
      * plugins directory.
      */
     {
+      resolve: `gatsby-alias-imports`,
+      options: {
+        aliases: {
+          components: "./src/components/"
+        }
+      }
+    },
+    {
       resolve: `gatsby-plugin-playgrounds`,
       options: {
         disable: process.env.GATSBY_PLAYGROUND_DISABLED === "true"

@@ -13,10 +13,7 @@ const Footer = () => {
           <Link to="/" className="inline-block w-12 mb-4">
             <Logo theme="white" />
           </Link>
-          <p
-            className="text-sm max-w-sm mx-auto md:mx-0"
-            dangerouslySetInnerHTML={{ __html: config.body }}
-          />
+          <div className="text-sm max-w-sm mx-auto md:mx-0">{config.body}</div>
         </div>
         <div className="md:flex">
           {config.menus.map(({ heading, links }, idx) => (
