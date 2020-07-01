@@ -1,23 +1,49 @@
 .button {
   @apply bg-blue
-    border
-    border-blue
-    duration-500
+    duration-300
     font-sans
     inline-block
     px-8
     py-3
+    relative
     text-sm
     text-white
     transition-all
     uppercase;
 
+  transform: translate(0);
+
   &:hover {
-    @apply bg-blue-dark
-      text-white;
+    @apply text-blue;
+
+    &:before {
+      @apply block;
+
+      right: 2px;
+    }
   }
 
-  &.theme_outline {
+  &:before {
+    @apply absolute
+      bg-white
+      duration-300
+      transition-all;
+
+    bottom: 2px;
+    content: "";
+    left: 2px;
+    right: 100%;
+    top: 2px;
+
+    z-index: -1;
+  }
+
+  /* &:hover {
+    @apply bg-blue-dark
+      text-white;
+  } */
+
+  /* &.theme_outline {
     @apply bg-transparent
       text-blue;
 
@@ -25,9 +51,9 @@
       @apply bg-blue
         text-white;
     }
-  }
+  } */
 
-  &.theme_outline_white {
+  /* &.theme_outline_white {
     @apply bg-transparent
       border-white
       text-white;
@@ -37,5 +63,11 @@
         opacity-50
         text-white;
     }
+  } */
+
+  &.theme_lime {
+    @apply bg-lime
+      /* border-lime */
+      text-black;
   }
 }
