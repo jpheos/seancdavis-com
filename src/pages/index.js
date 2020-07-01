@@ -54,7 +54,7 @@ const IndexPage = () => {
       {/* Jumbotron */}
       <div className={styles.jumbotron}>
         <Particles count={15} />
-        <div className="flex container items-center relative">
+        <div className="flex container items-center relative justify-between max-w-5xl">
           <div className="max-w-lg mr-16">
             <h1 className={styles.jumbotron_heading}>
               <span>Sean</span>
