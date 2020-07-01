@@ -99,9 +99,9 @@ const IndexPage = () => {
       {/* --- Callout --- */}
 
       <div className="bg-gray-dark text-white">
-        <div className="container py-6 max-w-4xl">
-          <div className="flex justify-between items-center">
-            <div>
+        <div className="container py-6 max-w-4xl text-center md:text-left">
+          <div className="md:flex justify-between items-center">
+            <div className="mb-4 md:mb-0">
               <h3 className="text-3xl">Inspired</h3>
               <p className="text-xl">lorem ipsum sil dolor rhoncus amet fili sed.</p>
             </div>
@@ -118,14 +118,14 @@ const IndexPage = () => {
 
       <div className="bg-gray-light">
         <div className="container py-24 max-w-4xl">
-          <div className="grid col-gap-4 grid-cols-2">
+          <div className="grid col-gap-4 sm:grid-cols-2">
             <div>
               <h3 className="subheading">About Me</h3>
               <h2 className="section-heading">Articles &amp; Thought Pieces</h2>
             </div>
           </div>
-          <div className="grid col-gap-4 grid-cols-2">
-            <div>
+          <div className="grid col-gap-4 md:grid-cols-2 max-w-xl md:max-w-none">
+            <div className="mb-4 md:mb-0">
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi est cumque ut,
                 voluptates tenetur accusantium vitae hic quae, aspernatur omnis, nesciunt
