@@ -36,12 +36,16 @@ const IndexPage = () => {
 
   const socialLinks = [
     {
-      icon: "circle",
+      icon: "twitter",
       url: "https://twitter.com/seancdavis29"
     },
     {
-      icon: "circle",
+      icon: "github",
       url: "https://github.com/seancdavis"
+    },
+    {
+      icon: "linkedin",
+      url: "https://www.linkedin.com/in/sean-c-davis-a143822a/"
     }
   ]
 
@@ -88,7 +92,7 @@ const IndexPage = () => {
             <div>
               {socialLinks.map((link, idx) => (
                 <Link key={idx} to={link.url} className={styles.about_intro_icon}>
-                  <Icon name="circle" theme="bgCircle" />
+                  <Icon name={link.icon} theme="bgCircle" />
                 </Link>
               ))}
             </div>
