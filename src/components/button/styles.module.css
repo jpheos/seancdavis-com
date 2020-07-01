@@ -1,5 +1,7 @@
 .button {
-  @apply bg-blue
+  @apply bg-transparent
+    border-2
+    border-blue
     duration-300
     font-sans
     inline-block
@@ -7,67 +9,44 @@
     py-3
     relative
     text-sm
-    text-white
+    text-blue
     transition-all
     uppercase;
 
   transform: translate(0);
 
   &:hover {
-    @apply text-blue;
+    @apply text-white;
+  }
 
-    &:before {
-      @apply block;
-
-      right: 2px;
-    }
+  &:hover:before {
+    @apply right-0;
   }
 
   &:before {
     @apply absolute
-      bg-white
+      bg-blue
       duration-300
       transition-all;
 
-    bottom: 2px;
+    bottom: 0;
     content: "";
-    left: 2px;
+    left: 0;
     right: 100%;
-    top: 2px;
-
+    top: 0;
     z-index: -1;
   }
 
-  /* &:hover {
-    @apply bg-blue-dark
-      text-white;
-  } */
-
-  /* &.theme_outline {
-    @apply bg-transparent
-      text-blue;
-
-    &:hover {
-      @apply bg-blue
-        text-white;
-    }
-  } */
-
-  /* &.theme_outline_white {
-    @apply bg-transparent
-      border-white
-      text-white;
-
-    &:hover {
-      @apply bg-transparent
-        opacity-50
-        text-white;
-    }
-  } */
-
   &.theme_lime {
-    @apply bg-lime
-      /* border-lime */
-      text-black;
+    @apply border-lime
+      text-lime;
+
+    &:hover {
+      @apply text-black;
+    }
+
+    &:before {
+      @apply bg-lime;
+    }
   }
 }

@@ -4,7 +4,7 @@ import lodash from "lodash"
 
 import Layout from "../layout"
 
-// import Button from "../components/button"
+import Button from "../components/button"
 import Icon from "../components/icon"
 import Image from "../components/image"
 import Link from "../components/link"
@@ -91,6 +91,24 @@ const IndexPage = () => {
                   <Icon name="circle" theme="bgCircle" />
                 </Link>
               ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* --- Callout --- */}
+
+      <div className="bg-gray-dark text-white">
+        <div className="container py-6 max-w-4xl">
+          <div className="flex justify-between items-center">
+            <div>
+              <h3 className="text-3xl">Inspired</h3>
+              <p className="text-xl">lorem ipsum sil dolor rhoncus amet fili sed.</p>
+            </div>
+            <div>
+              <Button to="/" theme="lime">
+                Do Something
+              </Button>
             </div>
           </div>
         </div>
