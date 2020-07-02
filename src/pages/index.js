@@ -83,11 +83,15 @@ const IndexPage = () => {
         />
         <div className="container py-24 max-w-4xl relative">
           <div className="max-w-md">
-            <h3 className="subheading">About Me</h3>
-            <h2 className="section-heading">Snappy headline about yourself</h2>
+            <h3 className="subheading">Nice to meet you</h3>
+            <h2 className="section-heading">Hi, I'm Sean.</h2>
             <p className="md:text-xl">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus odio justo, aliquam
-              non vulputate. Lorem ipsum sil dolor rhoncus amet fili sed erimus alta laguna.
+              I'm a tinkerer and a teacher. I'm driven to learn as much as I can as fast as I can,
+              and then to pass those learnings onto those who may find them beneficial.
+            </p>
+            <p className="md:text-xl">
+              I like long walks in the woods. I also like talking about the web. Meeting new people
+              is fun, too! Maybe we should chat.
             </p>
             <div>
               {socialLinks.map((link, idx) => (
@@ -106,12 +110,15 @@ const IndexPage = () => {
         <div className="container py-6 max-w-4xl text-center md:text-left">
           <div className="md:flex justify-between items-center">
             <div className="mb-4 md:mb-0">
-              <h3 className="text-3xl">Inspired</h3>
-              <p className="text-xl">lorem ipsum sil dolor rhoncus amet fili sed.</p>
+              <h3 className="text-3xl">Rather write an email?</h3>
+              <p className="text-xl max-w-md">
+                I can do that, too. But I'm not very good at checking it. Maybe you should make it
+                rhyme.
+              </p>
             </div>
             <div>
-              <Button to="/" theme="lime">
-                Do Something
+              <Button to="mailto:hello@seancdavis.com" theme="lime">
+                Email me
               </Button>
             </div>
           </div>
@@ -125,44 +132,81 @@ const IndexPage = () => {
           <div className="grid col-gap-4 sm:grid-cols-2">
             <div>
               <h3 className="subheading">About Me</h3>
-              <h2 className="section-heading">Articles &amp; Thought Pieces</h2>
+              <h2 className="section-heading">A Day in the Life</h2>
             </div>
           </div>
           <div className="grid col-gap-4 md:grid-cols-2 max-w-xl md:max-w-none">
             <div className="mb-4 md:mb-0">
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi est cumque ut,
-                voluptates tenetur accusantium vitae hic quae, aspernatur omnis, nesciunt
-                praesentium quo vero optio excepturi dicta sequi eius beatae.
+                This rubber thing that sits atop an awkward tan line on my wrist starts buzzing at
+                5:00 AM every morning.
               </p>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi est cumque ut,
-                voluptates tenetur accusantium vitae hic quae, aspernatur omnis, nesciunt
-                praesentium quo vero optio excepturi dicta sequi eius beatae.
+                Most mornings I listen to it and pop right out of bed, already anxious to get to the
+                computer. But first, of course, there's weighing myself (to assure myself that I'm
+                still 40 pounds less than I was two years ago), letting the dog out, and making a
+                cup of decaf coffee (you know, to wake me up).
               </p>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi est cumque ut,
-                voluptates tenetur accusantium vitae hic quae, aspernatur omnis, nesciunt
-                praesentium quo vero optio excepturi dicta sequi eius beatae.
+                While soaking the rare quiet moments on a busy street near the city, I head up to my
+                office to do what I love — <em>tinker</em> and <em>teach</em>.
+              </p>
+              <p>
+                I'll spend the next hour <em>teaching</em> —{" "}
+                <Link to="https://cobwwweb.com/">
+                  writing (or editing a video) about some web development topic
+                </Link>{" "}
+                I want to share with the world. The hour after that is when I <em>tinker</em>. I
+                learn by creating something new, providing fodder for tomorrow's writing session.
+              </p>
+              <p>
+                That's about the time my toddler begins to rise from her glorious, 12-hour slumber
+                to fill the quiet space with some new sound I hadn't known before. I use that as my
+                alarm clock — a cue to transition to the part of the day normal people are awake.
+              </p>
+              <p>
+                The kid and I get dressed and walk together to daycare. I leave her with a hug and a
+                hope that she'll enjoy this day more than I will, and set off for a long detour
+                before I get home, popping on an audio book or calling a loved one while traversing
+                the busy neighborhood streets.
               </p>
             </div>
             <div>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi est cumque ut,
-                voluptates tenetur accusantium vitae hic quae, aspernatur omnis, nesciunt
-                praesentium quo vero optio excepturi dicta sequi eius beatae.
+                After breakfast, I start the part of the day someone pays me for, in which I act as
+                Director of Technology for <Link to="https://www.helloample.com/">Ample</Link>. I'm
+                likely to spend most of my day exploring how to build{" "}
+                <Link to="https://cobwwweb.com/wtf-is-jamstack">Jamstack</Link> websites with
+                efficiency and excellence, driving my team to find that perfect balance between
+                quality and speed. Either that or I have 8 straight hours of meetings.
               </p>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi est cumque ut,
-                voluptates tenetur accusantium vitae hic quae, aspernatur omnis, nesciunt
-                praesentium quo vero optio excepturi dicta sequi eius beatae.
+                The end of the workday often comes with accompanying my wife on another stroll up
+                the street, this time to get the girl from daycare. That's the best part of most
+                days, because there's no agenda for the evenings. We just have to make sure we feed
+                that screaming monster at some point. And I suppose she has to be bathed
+                occasionally. But otherwise, that time is ours. Not to create. Not to teach. To have
+                fun.
               </p>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi est cumque ut,
-                voluptates tenetur accusantium vitae hic quae, aspernatur omnis, nesciunt
-                praesentium quo vero optio excepturi dicta sequi eius beatae.
+                But then we put the noise machine to bed and I'm off to do something else. Maybe
+                it's a quiet night and I'll read a book. Or maybe I'll dig into another hobby, like
+                playing music, baking bread, writing fiction, or growing plants from seed.
+              </p>
+              <p>
+                When most days look like this one, I head to bed, exhausted and content, but never
+                satisfied. Because tomorrow I get to wake up and do it all over again, hopefully
+                better than today. So I take a moment to write a few words about the day, noting the
+                wins I achieved, what I'm thankful for, and what I want to tomorrow to bring.
+              </p>
+              <p>
+                And as I drift off to sleep, thinking about the day, one idea remains, more
+                important than the rest. That in the midst of all the work I did throughout the day
+                — everything that drained the energy from me — that I had a little fun along the
+                way.
               </p>
             </div>
+            <div></div>
           </div>
         </div>
       </div>
