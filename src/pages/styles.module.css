@@ -70,7 +70,7 @@
     filter: FlipH;
   }
 
-  @media (min-width: 1300px) {
+  @media (min-width: 1400px) {
     transform: scaleX(1);
   }
 }

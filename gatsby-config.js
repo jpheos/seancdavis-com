@@ -60,7 +60,7 @@ module.exports = {
             variants: [`300`, `400`, `700`]
           },
           {
-            family: `Lora`,
+            family: `Source Serif Pro`,
             variants: [`400`]
           }
         ]

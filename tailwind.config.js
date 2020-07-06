@@ -29,9 +29,9 @@ module.exports = {
       }
     },
     fontFamily: {
-      headings: ["DM Serif Display", "Lora", "serif"],
+      headings: ["DM Serif Display", "serif"],
       sans: ["Lato", "sans-serif"],
-      serif: ["Lora", "serif"],
+      serif: ["Source Serif Pro", "serif"],
       subheadings: ["Lato", "sans-serif"]
     }
   },

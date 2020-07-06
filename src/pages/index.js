@@ -170,8 +170,6 @@ const IndexPage = () => {
                 before I get home, popping on an audio book or calling a loved one while traversing
                 the busy neighborhood streets.
               </p>
-            </div>
-            <div>
               <p>
                 After breakfast, I start the part of the day someone pays me for, in which I act as
                 Director of Technology for <Link to="https://www.helloample.com/">Ample</Link>. I'm
@@ -180,6 +178,8 @@ const IndexPage = () => {
                 efficiency and excellence, driving my team to find that perfect balance between
                 quality and speed. Either that or I have 8 straight hours of meetings.
               </p>
+            </div>
+            <div>
               <p>
                 The end of the workday often comes with accompanying my wife on another stroll up
                 the street, this time to get the girl from daycare. That's the best part of most
