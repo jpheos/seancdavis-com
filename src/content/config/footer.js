@@ -38,6 +38,19 @@ const menus = [
         url: "https://github.com/seancdavis"
       }
     ]
+  },
+  {
+    heading: "Site References",
+    links: [
+      {
+        label: "License",
+        url: "/license"
+      },
+      {
+        label: "Code",
+        url: "https://github.com/seancdavis/seancdavis-com"
+      }
+    ]
   }
 ]
 
