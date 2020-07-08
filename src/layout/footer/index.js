@@ -1,11 +1,31 @@
 import React from "react"
-
-import config from "../../content/config/footer"
+import { graphql, useStaticQuery } from "gatsby"
+import lodash from "lodash"
 
 import Link from "../../components/link"
 import Logo from "../../components/logo"
 
 const Footer = () => {
+  const { config } = useStaticQuery(graphql`
+    query {
+      config: markdownRemark(fileAbsolutePath: { regex: "//src/content/config/footer.md$/" }) {
+        body: html
+        frontmatter {
+          menus {
+            heading
+            links {
+              label
+              url
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  const { body } = config
+  const { menus } = lodash.get(config, "frontmatter") || []
+
   return (
     <div className="bg-black text-white py-12">
       <div className="container max-w-4xl md:flex justify-between text-center md:text-left">
@@ -13,11 +33,14 @@ const Footer = () => {
           <Link to="/" className="inline-block w-12 mb-4">
             <Logo theme="white" />
           </Link>
-          <div className="text-sm max-w-sm mx-auto md:mx-0">{config.body}</div>
+          <div
+            className="text-sm max-w-sm mx-auto md:mx-0 links-inherit-color links-underline"
+            dangerouslySetInnerHTML={{ __html: body }}
+          />
         </div>
         <div className="md:flex">
-          {config.menus.map(({ heading, links }, idx) => (
-            <div key={idx} className={`md:ml-8 ${idx + 1 < config.menus.length ? "mb-8" : ""}`}>
+          {menus.map(({ heading, links }, idx) => (
+            <div key={idx} className={`md:ml-8 ${idx + 1 < menus.length ? "mb-8" : ""}`}>
               <span className="block mb-2 font-sans uppercase font-bold text-xs opacity-50">
                 {heading}
               </span>

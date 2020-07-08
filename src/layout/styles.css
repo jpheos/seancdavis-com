@@ -87,6 +87,14 @@ p {
   }
 }
 
+.links-inherit-color a {
+  color: inherit;
+}
+
+.links-underline a {
+  @apply underline;
+}
+
 /* ---------------------------------------- | Tailwind */
 
 @tailwind components;

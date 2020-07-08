@@ -5,11 +5,6 @@ module.exports = {
     author: `@gatsbyjs`
   },
   plugins: [
-    /**
-     * Creates playgrounds from .mdx files in src/templates and src/components.
-     * Pulled from Ample's starter kit and adjusted for this project. Lives in
-     * plugins directory.
-     */
     {
       resolve: `gatsby-alias-imports`,
       options: {
@@ -18,6 +13,11 @@ module.exports = {
         }
       }
     },
+    /**
+     * Creates playgrounds from .mdx files in src/templates and src/components.
+     * Pulled from Ample's starter kit and adjusted for this project. Lives in
+     * plugins directory.
+     */
     {
       resolve: `gatsby-plugin-playgrounds`,
       options: {
@@ -34,6 +34,13 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [`gatsby-remark-external-links`]
+      }
+    },
+    `gatsby-plugin-catch-links`,
     `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-plugin-manifest`,

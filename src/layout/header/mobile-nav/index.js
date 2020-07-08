@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
 import classNames from "classnames/bind"
-import lodash from "lodash"
 
 import styles from "./styles.module.css"
 
@@ -9,19 +8,19 @@ import Button from "../../../components/button"
 import Link from "../../../components/link"
 import Logo from "../../../components/logo"
 
-const MobileLink = link => {
+const MobileLink = ({ button, label, url }) => {
   // If the link has a mobile theme then render it as a button.
-  if (lodash.get(link, "theme.mobile")) {
+  if (button) {
     return (
-      <Button to={link.url} theme={lodash.get(link, "theme.mobile")}>
-        {link.label}
+      <Button to={url} theme="white">
+        {label}
       </Button>
     )
   }
   // Otherwise, render a typical link.
   return (
-    <Link className={styles.mobileLink} activeClassName={styles.active} to={link.url}>
-      {link.label}
+    <Link className={styles.mobileLink} activeClassName={styles.active} to={url}>
+      {label}
     </Link>
   )
 }
@@ -68,8 +67,8 @@ MobileMenu.propTypes = {
    */
   links: PropTypes.arrayOf(
     PropTypes.shape({
+      button: PropTypes.bool,
       label: PropTypes.string.isRequired,
-      theme: PropTypes.string,
       url: PropTypes.string.isRequired
     })
   ).isRequired

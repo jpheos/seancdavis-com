@@ -49,4 +49,17 @@
       @apply bg-lime;
     }
   }
+
+  &.theme_white {
+    @apply border-white
+      text-white;
+
+    &:hover {
+      @apply text-black;
+    }
+
+    &:before {
+      @apply bg-white;
+    }
+  }
 }

@@ -1,25 +1,20 @@
 import React from "react"
 import PropTypes from "prop-types"
-import lodash from "lodash"
 
 import styles from "./styles.module.css"
 
 import Button from "../../../components/button"
 import Link from "../../../components/link"
 
-const DesktopLink = link => {
+const DesktopLink = ({ button, label, url }) => {
   // If the link has a desktop theme then render it as a button.
-  if (lodash.get(link, "theme.desktop")) {
-    return (
-      <Button to={link.url} theme={lodash.get(link, "theme.desktop")}>
-        {link.label}
-      </Button>
-    )
+  if (button) {
+    return <Button to={url}>{label}</Button>
   }
   // Otherwise, render a typical link.
   return (
-    <Link className={styles.desktopLink} activeClassName={styles.active} to={link.url}>
-      {link.label}
+    <Link className={styles.desktopLink} activeClassName={styles.active} to={url}>
+      {label}
     </Link>
   )
 }
@@ -40,8 +35,8 @@ DesktopNav.propTypes = {
    */
   links: PropTypes.arrayOf(
     PropTypes.shape({
+      button: PropTypes.bool,
       label: PropTypes.string.isRequired,
-      theme: PropTypes.string,
       url: PropTypes.string.isRequired
     })
   ).isRequired
