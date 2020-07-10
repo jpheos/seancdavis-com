@@ -1,5 +1,6 @@
 .icon {
-  @apply text-blue
+  @apply align-middle
+    text-blue
     inline-block;
 
   svg {

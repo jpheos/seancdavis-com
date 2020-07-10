@@ -4,9 +4,10 @@ import classNames from "classnames/bind"
 
 import styles from "./styles.module.css"
 
-import Button from "../../../components/button"
-import Link from "../../../components/link"
-import Logo from "../../../components/logo"
+import Button from "components/button"
+import Icon from "components/icon"
+import Link from "components/link"
+import Logo from "components/logo"
 
 const MobileLink = ({ button, label, url }) => {
   // If the link has a mobile theme then render it as a button.
@@ -34,8 +35,8 @@ const MobileMenu = ({ links }) => {
 
   return (
     <>
-      <button onClick={handleMenuTriggerClick} className="lg:hidden">
-        menu
+      <button onClick={handleMenuTriggerClick} className="lg:hidden w-8 text-right">
+        <Icon name="menu" className="text-gray-blue h-8 svg-h-full" />
       </button>
 
       <div className={classNames(styles.mobileMenu, { [styles.active]: menuActive })}>
@@ -44,8 +45,8 @@ const MobileMenu = ({ links }) => {
           <Link to="/">
             <Logo className="h-12" theme="white" />
           </Link>
-          <button onClick={handleMenuTriggerClick} className="text-white">
-            close
+          <button onClick={handleMenuTriggerClick} className="w-8 text-right opacity-50">
+            <Icon name="cancel" className="text-white h-8 svg-h-full" />
           </button>
         </div>
         {/* List of links */}
