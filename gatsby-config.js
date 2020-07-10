@@ -9,7 +9,8 @@ module.exports = {
       resolve: `gatsby-alias-imports`,
       options: {
         aliases: {
-          components: "./src/components/"
+          components: "./src/components/",
+          layout: "./src/layout/"
         }
       }
     },
