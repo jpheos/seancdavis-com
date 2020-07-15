@@ -15,6 +15,13 @@ const PageTemplateAdapter = ({ data }) => {
     ...data.page
   }
 
+  // TODO: Add SEO component here. I brought in the SEO component from the
+  // starter and messed with it, but it need some serious love. Consider that in
+  // this project I have more control over the values in the markdown files, as
+  // I'm not (yet) using a CMS. Don't not prematurely optimize this, but just
+  // get it working with sensible defaults, knowing I'll have to touch the
+  // codebase any time I'm adjusting content anyways.
+
   const TemplateTagName = layoutMap[page.layout || "default"]
 
   return <TemplateTagName {...page} />
@@ -30,6 +37,9 @@ export const query = graphql`
       id
       body: html
       frontmatter {
+        seo {
+          ...SeoAttributes
+        }
         bio {
           body
           heading

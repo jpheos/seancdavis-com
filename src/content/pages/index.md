@@ -65,4 +65,16 @@ bio:
     When most days look like this one, I head to bed, exhausted and content, but never satisfied. Because tomorrow I get to wake up and do it all over again, hopefully better than today. So I take a moment to write a few words about the day, noting the wins I achieved, what I'm thankful for, and what I want to tomorrow to bring.
 
     And as I drift off to sleep, thinking about the day, one idea remains, more important than the rest. That in the midst of all the work I did throughout the day — everything that drained the energy from me — that I had a little fun along the way.
+seo:
+  title: SEO Title
+  description: SEO Description ...
+  image: "../../images/fpo-image.jpg"
+  og:
+    title: OG Title
+    description: OG Description ...
+    image: "../../images/fpo-image.jpg"
+  twitter:
+    title: Twitter Title
+    description: Twitter Description ...
+    image: "../../images/fpo-image.jpg"
 ---

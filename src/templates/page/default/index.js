@@ -3,9 +3,11 @@ import PropTypes from "prop-types"
 
 import Layout from "layout"
 
-const PageTemplateDefault = ({ body, heading, subheading }) => {
+const PageTemplateDefault = ({ body, children, heading, subheading }) => {
   return (
     <Layout>
+      {children}
+
       <div className="py-24">
         <div className="container max-w-4xl">
           <h1 className="text-4xl">{heading}</h1>
@@ -27,6 +29,10 @@ PageTemplateDefault.propTypes = {
    * The main body of the page.
    */
   body: PropTypes.string.isRequired,
+  /**
+   * Content injected above the page content.
+   */
+  children: PropTypes.node,
   /**
    * The primary heading (<h1>).
    */

@@ -10,16 +10,17 @@ import Image from "components/image"
 import Link from "components/link"
 import Particles from "components/particles"
 import Typewriter from "components/typewriter"
-// import SEO from "components/seo"
 
 import styles from "./styles.module.css"
 
 import laptopGraphic from "../../../images/laptop-graphic.svg"
 import laptopLines from "../../../images/laptop-lines.svg"
 
-const PageTemplateHome = ({ bio, callout, heading, intro, jumbotron }) => {
+const PageTemplateHome = ({ bio, callout, children, heading, intro, jumbotron }) => {
   return (
     <Layout>
+      {children}
+
       {/* --- Jumbotron --- */}
       <div className={styles.jumbotron}>
         <Particles count={15} />
@@ -136,6 +137,10 @@ PageTemplateHome.propTypes = {
     heading: PropTypes.string,
     subheading: PropTypes.string
   }).isRequired,
+  /**
+   * Content injected above the page content.
+   */
+  children: PropTypes.node,
   /**
    * The primary page heading. It is split at "/" characters.
    */
