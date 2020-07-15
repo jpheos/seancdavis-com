@@ -1,0 +1,7 @@
+[build]
+  # Run the test suite before building the project.
+  command = "yarn test && yarn build"
+  # Gatsby's build directory.
+  publish = "public/"
+  # Don't build playgrounds in production.
+  GATSBY_PLAYGROUND_DISABLED="true"
