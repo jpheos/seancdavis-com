@@ -3,6 +3,9 @@ title: License
 heading: A License (Sort of)
 path: /license
 subheading: This license governs all content and code found within this site.
+seo:
+  title: A License (Sort of)
+  description: This license governs all content and code found within this site.
 ---
 
 I thought about copying [the CSS-Tricks license](https://css-tricks.com/license/), you know, for the irony. But also because it's almost exactly how I feel.

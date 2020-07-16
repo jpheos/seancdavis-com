@@ -2,7 +2,7 @@
 
 exports[`Icon renders correctly 1`] = `
 <span
-  className="icon default"
+  className="icon"
 >
   <svg
     height={100}

@@ -1,6 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
 
+import SEO from "components/seo"
+
 import PageTemplateDefault from "./default"
 import PageTemplateHome from "./home"
 
@@ -9,22 +11,19 @@ const layoutMap = {
   home: PageTemplateHome
 }
 
-const PageTemplateAdapter = ({ data }) => {
+const PageTemplateAdapter = ({ data, location }) => {
   let page = {
     ...data.page.frontmatter,
     ...data.page
   }
 
-  // TODO: Add SEO component here. I brought in the SEO component from the
-  // starter and messed with it, but it need some serious love. Consider that in
-  // this project I have more control over the values in the markdown files, as
-  // I'm not (yet) using a CMS. Don't not prematurely optimize this, but just
-  // get it working with sensible defaults, knowing I'll have to touch the
-  // codebase any time I'm adjusting content anyways.
-
   const TemplateTagName = layoutMap[page.layout || "default"]
 
-  return <TemplateTagName {...page} />
+  return (
+    <TemplateTagName {...page}>
+      <SEO {...page.seo} location={location} />
+    </TemplateTagName>
+  )
 }
 
 PageTemplateAdapter.propTypes = {}
