@@ -47,39 +47,37 @@ exports[`Header renders correctly with no props 1`] = `
       <li>
         <a
           className="desktopLink"
-          href="https://cobwwweb.com/"
+          href=""
           rel="noopener"
           target="_blank"
         >
-          Blog
-        </a>
-      </li>
-      <li>
-        <a
-          className="desktopLink"
-          href="https://twitter.com/seancdavis29"
-          rel="noopener"
-          target="_blank"
-        >
-          Twitter
-        </a>
-      </li>
-      <li>
-        <a
-          className="desktopLink"
-          href="https://github.com/seancdavis"
-          rel="noopener"
-          target="_blank"
-        >
-          GitHub
+          
         </a>
       </li>
     </ul>
     <button
-      className="lg:hidden"
+      className="lg:hidden w-8 text-right"
       onClick={[Function]}
     >
-      menu
+      <span
+        className="text-gray-blue h-8 svg-h-full icon"
+      >
+        <svg
+          height={256}
+          viewBox="0 0 256 256"
+          width={256}
+        >
+          <path
+            d="M227.368421,59.2631579 L28.6315789,59.2631579 C18.341642,59.2631579 10,50.9215159 10,40.6315789 C10,30.341642 18.341642,22 28.6315789,22 L227.368421,22 C237.658358,22 246,30.341642 246,40.6315789 C246,50.9215159 237.658358,59.2631579 227.368421,59.2631579 Z"
+          />
+          <path
+            d="M227.368421,146.210526 L28.6315789,146.210526 C18.3416423,146.210526 10.0000008,137.868884 10.0000008,127.578947 C10.0000008,117.289011 18.3416423,108.947369 28.6315789,108.947368 L227.368421,108.947368 C237.658358,108.947368 246,117.28901 246,127.578947 C246,137.868884 237.658358,146.210526 227.368421,146.210526 L227.368421,146.210526 Z"
+          />
+          <path
+            d="M227.368421,233.157895 L28.6315789,233.157895 C18.341642,233.157895 10,224.816253 10,214.526316 C10,204.236379 18.341642,195.894737 28.6315789,195.894737 L227.368421,195.894737 C237.658358,195.894737 246,204.236379 246,214.526316 C246,224.816253 237.658358,233.157895 227.368421,233.157895 Z"
+          />
+        </svg>
+      </span>
     </button>
     <div
       className="mobileMenu"
@@ -147,10 +145,25 @@ exports[`Header renders correctly with no props 1`] = `
           </svg>
         </a>
         <button
-          className="text-white"
+          className="w-8 text-right opacity-50"
           onClick={[Function]}
         >
-          close
+          <span
+            className="text-white h-8 svg-h-full icon"
+          >
+            <svg
+              height={256}
+              viewBox="0 0 256 256"
+              width={256}
+            >
+              <path
+                d="M226.333333,243.190476 C221.864047,243.186542 217.579247,241.407945 214.420952,238.245714 L17.7542857,41.5790476 C11.5652675,34.9371141 11.7478862,24.5868291 18.1673577,18.1673577 C24.5868291,11.7478862 34.9371141,11.5652675 41.5790476,17.7542857 L238.245714,214.420952 C243.060571,219.241799 244.499898,226.487117 241.893307,232.782281 C239.286716,239.077445 233.146803,243.184483 226.333333,243.190476 Z"
+              />
+              <path
+                d="M29.6666667,243.190476 C22.8531971,243.184483 16.7132839,239.077445 14.1066927,232.782281 C11.5001015,226.487117 12.9394294,219.241799 17.7542857,214.420952 L214.420952,17.7542857 C221.062886,11.5652675 231.413171,11.7478862 237.832642,18.1673577 C244.252114,24.5868291 244.434732,34.9371141 238.245714,41.5790476 L41.5790476,238.245714 C38.4207527,241.407945 34.1359526,243.186542 29.6666667,243.190476 Z"
+              />
+            </svg>
+          </span>
         </button>
       </div>
       <ul
@@ -159,31 +172,11 @@ exports[`Header renders correctly with no props 1`] = `
         <li>
           <a
             className="mobileLink"
-            href="https://cobwwweb.com/"
+            href=""
             rel="noopener"
             target="_blank"
           >
-            Blog
-          </a>
-        </li>
-        <li>
-          <a
-            className="mobileLink"
-            href="https://twitter.com/seancdavis29"
-            rel="noopener"
-            target="_blank"
-          >
-            Twitter
-          </a>
-        </li>
-        <li>
-          <a
-            className="mobileLink"
-            href="https://github.com/seancdavis"
-            rel="noopener"
-            target="_blank"
-          >
-            GitHub
+            
           </a>
         </li>
       </ul>
