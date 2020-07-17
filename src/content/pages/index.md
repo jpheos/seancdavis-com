@@ -66,15 +66,15 @@ bio:
 
     And as I drift off to sleep, thinking about the day, one idea remains, more important than the rest. That in the midst of all the work I did throughout the day — everything that drained the energy from me — that I had a little fun along the way.
 seo:
-  title: SEO Title
-  description: SEO Description ...
+  title: Hello
+  description: I'm Sean C Davis, a tinkerer and a teacher in the wide world of web development.
   image: "../../images/fpo-image.jpg"
   og:
-    title: OG Title
-    description: OG Description ...
-    image: "../../images/fpo-image.jpg"
+    title: Hi, I'm Sean.
+    description: I'm a tinkerer and a teacher in the wide world of web development. Come see what (weird) stuff is going on with me.
+    image: ""
   twitter:
-    title: Twitter Title
-    description: Twitter Description ...
-    image: "../../images/fpo-image.jpg"
+    title: ""
+    description: ""
+    image: ""
 ---
