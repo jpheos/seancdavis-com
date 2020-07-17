@@ -24,19 +24,21 @@ const PageTemplateHome = ({ bio, callout, children, heading, intro, jumbotron })
       {/* --- Jumbotron --- */}
       <div className={styles.jumbotron}>
         <Particles count={15} />
-        <div className="flex container items-center relative justify-between max-w-5xl">
-          <div className="max-w-lg mr-16">
-            <h1 className={styles.jumbotron_heading}>
-              {heading.split("/").map((h, i) => (
-                <span key={i}>{h}</span>
-              ))}
-            </h1>
-            <p className="text-4xl">
-              <Typewriter texts={lodash.shuffle(lodash.get(jumbotron, "typewriter_text"))} />
-            </p>
-          </div>
-          <div className={styles.jumbotron_image}>
-            <Image filename="fpo-image.jpg" />
+        <div className="container max-w-5xl">
+          <div className="flex container items-center relative justify-between max-w-5xl">
+            <div className="max-w-lg mr-16">
+              <h1 className={styles.jumbotron_heading}>
+                {heading.split("/").map((h, i) => (
+                  <span key={i}>{h}</span>
+                ))}
+              </h1>
+              <p className="text-2xl sm:text-3xl md:text-4xl">
+                <Typewriter texts={lodash.shuffle(lodash.get(jumbotron, "typewriter_text"))} />
+              </p>
+            </div>
+            <div className={styles.jumbotron_image}>
+              <Image filename="fpo-image.jpg" />
+            </div>
           </div>
         </div>
       </div>

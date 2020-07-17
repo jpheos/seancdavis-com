@@ -6,19 +6,19 @@ heading: Sean/C Davis.
 subheading: This is the home page
 jumbotron:
   typewriter_text:
-    - (aspiring) Baker?
+    - Baker. (Kind of.)
     - Developer.
     - Father.
-    - (aspiring) Gardener?
-    - ... has no idea what he's doing.
+    - Gardener. (Plant Killer.)
+    - Has no idea what he's doing.
     - Husband.
-    - ... is balding.
     - Nerd.
-    - (former) Podcaster.
+    - Podcaster. (Not really.)
+    - Shaved his head.
     - Speaker.
     - Teacher.
     - Tinkerer.
-    - Weirdo.
+    - Weirdo. (Definitely.)
     - Writer.
 intro:
   heading: Hi, I'm Sean.
