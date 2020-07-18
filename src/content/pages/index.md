@@ -72,9 +72,9 @@ seo:
   og:
     title: Hi, I'm Sean.
     description: I'm a tinkerer and a teacher in the wide world of web development. Come see what (weird) stuff is going on with me.
-    image: ""
+    # image: ""
   twitter:
     title: ""
     description: ""
-    image: ""
+    # image: ""
 ---

@@ -33,6 +33,49 @@ exports.createSchemaCustomization = ({ actions, schema, getNodesByType }) => {
       })
     )
   )
+
+  // Set explicit type definitions.
+
+  // Explicitly define schema.
+  const typeDefs = `
+    # --- SEO ---
+
+    type SeoMetaOg @infer {
+      description: String
+      image: File @fileByRelativePath
+      title: String
+      type: String
+    }
+
+    type SeoMetaTwitter @infer {
+      card: String
+      description: String
+      image: File @fileByRelativePath
+      title: String
+    }
+
+    type SeoMeta @infer {
+      description: String
+      image: File @fileByRelativePath
+      og: SeoMetaOg
+      title_template: String
+      title: String
+      twitter: SeoMetaTwitter
+    }
+
+    # --- Frontmatter ---
+
+    type Frontmatter @infer {
+      seo: SeoMeta
+    }
+
+    # --- MarkdownRemark ---
+
+    type MarkdownRemark implements Node @infer {
+      frontmatter: Frontmatter
+    }
+  `
+  actions.createTypes(typeDefs)
 }
 
 /**

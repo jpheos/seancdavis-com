@@ -9,15 +9,15 @@ export const SeoAttributes = graphql`
     }
   }
 
-  fragment SeoAttributes on MarkdownRemarkFrontmatterSeo {
-    # title_template
+  fragment SeoAttributes on SeoMeta {
+    title_template
     title
     description
     image {
       ...SeoImageAttributes
     }
     og {
-      # type
+      type
       title
       description
       image {
@@ -25,7 +25,7 @@ export const SeoAttributes = graphql`
       }
     }
     twitter {
-      # card
+      card
       title
       description
       image {

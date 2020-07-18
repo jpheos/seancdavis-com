@@ -1,8 +1,10 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import PropTypes from "prop-types"
 import lodash from "lodash"
+import is from "is_js"
 
 import Layout from "layout"
+import ReaderView from "layout/reader-view"
 
 import Button from "components/button"
 import Icon from "components/icon"
@@ -17,6 +19,23 @@ import laptopGraphic from "../../../images/laptop-graphic.svg"
 import laptopLines from "../../../images/laptop-lines.svg"
 
 const PageTemplateHome = ({ bio, callout, children, heading, intro, jumbotron }) => {
+  const [isIe, setIsIe] = useState(false)
+
+  useEffect(() => {
+    // Don't do anything if we don't have access to the window.
+    if (typeof window === "undefined") return
+    // If using IE, set the state appropriately.
+    if (is.ie()) setIsIe(true)
+  }, [])
+
+  if (isIe) {
+    return (
+      <ReaderView title={bio.heading} body={bio.body}>
+        {children}
+      </ReaderView>
+    )
+  }
+
   return (
     <Layout>
       {children}

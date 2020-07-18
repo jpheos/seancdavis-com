@@ -25,7 +25,7 @@ module.exports = {
         orange: "var(--color-orange)",
         pink: "var(--color-pink)",
         white: "var(--color-white)",
-        yellow: "var(--color-yellow),"
+        yellow: "var(--color-yellow)"
       }
     },
     fontFamily: {
