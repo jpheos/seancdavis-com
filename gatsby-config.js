@@ -46,10 +46,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {
-        printRejected: true // Print removed selectors and processed file names
+        printRejected: true, // Print removed selectors and processed file names
         // develop: true, // Enable while using `gatsby develop`
-        // tailwind: true, // Enable tailwindcss support
-        // whitelist: ['whitelist'], // Don't remove this selector
+        tailwind: true, // Enable tailwindcss support
+        // TODO: Whitelist is not working and the button is the only big issue I've found so far.
+        // TODO: Should also check IE/reader view(s)
+        whitelist: ["button"] // Don't remove this selector
         // ignore: ['/ignored.css', 'prismjs/', 'docsearch.js/'], // Ignore files/folders
         // purgeOnly : ['components/', '/main.css', 'bootstrap/'], // Purge only these files/folders
       }
