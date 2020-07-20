@@ -22,7 +22,7 @@ const DesktopLink = ({ button, label, url }) => {
 const DesktopNav = ({ links }) => (
   <ul className="items-center space-x-4 hidden lg:flex">
     {links.map((link, idx) => (
-      <li key={idx}>
+      <li key={idx} className="mb-0">
         <DesktopLink {...link} />
       </li>
     ))}
