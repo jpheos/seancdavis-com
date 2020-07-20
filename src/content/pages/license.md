@@ -8,18 +8,18 @@ seo:
   description: This license governs all content and code found within this site.
 ---
 
-I thought about copying [the CSS-Tricks license](https://css-tricks.com/license/), you know, for the irony. But also because it's almost exactly how I feel.
+This site exists to inspire and help those working with the web. I don't want some silly, protective and complicated license to get in the way of that.
 
-As this site grows, I intend for its purpose to remain the same — to inspire and help those working with the web. And I don't want some silly, protective license to get in the way of that.
+In fact, I actually _want_ you to take what you find on this site and use it in your own projects. Use it to have fun. Use it to make money. Either way, use it how you see fit — that's what it's here for. All the [code that powers the site](https://github.com/seancdavis/seancdavis-com) is publicly available in an open-source GitHub repo.
 
-In fact, I actually _want_ you to take what you find on this site and use it in your own projects. Use it to have fun. Use it to make money. Either way, that's great — that's what it's here for.
+That said, there are three points of clarification to append to the _do whatever you want_ rule:
 
-And you don't have to share attribution or credit, although that would very much make me happy.
+1. You may not copy my brand directly. You can use it for inspiration. But please don't up and lift it for your own, at least without asking first. I'm also happy to put you in touch with the designer who created it.
 
-I have just one exception and one request.
+2. If you copy and publish wholesale articles, you must recognize my article the original by [adding a canonical meta tag](https://moz.com/learn/seo/canonicalization) to yours.
 
-**Exception:** You may not copy my brand directly. You can use it for inspiration. But please don't up and lift it for your own, at least without asking first.
-
-**Request:** Share your work with me and how the content here helped you! I like knowing that what I'm doing is helping, and that's a great way to give back for what you've received.
+3. While you don't have to credit me (although I'd be forever grateful if you did), I'd love for you to share your work with me. I like knowing that what I'm doing is helping, and that's a great way to give back for what you've received.
 
 In the end, I want you to have fun playing with the web. I want you to earn money from it. I want you to help make it better. And if you can use something here to do that, do it!
+
+Use your best judgment and don't let this silly license get in the way.
