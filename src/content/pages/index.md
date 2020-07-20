@@ -3,7 +3,6 @@ title: Home Page
 path: /
 layout: home
 heading: Sean/C Davis.
-subheading: This is the home page
 jumbotron:
   typewriter_text:
     - Baker. (Kind of.)
@@ -13,7 +12,8 @@ jumbotron:
     - Has no idea what he's doing.
     - Husband.
     - Nerd.
-    - Podcaster. (Not really.)
+    - Podcaster. (That One Time.)
+    - Reader. (A Slow Reader.)
     - Shaved his head.
     - Speaker.
     - Teacher.
@@ -24,9 +24,9 @@ intro:
   heading: Hi, I'm Sean.
   subheading: Nice to meet you
   body_md: |-
-    I'm a tinkerer and a teacher. I'm driven to learn as much as I can as fast as I can, and then to pass those learnings onto those who may find them beneficial.
+    I'm a tinkerer and a teacher. I'm driven to learn as much as I can as fast as I can, and then to pass those learnings onto anyone who may find them beneficial.
 
-    I like long walks in the woods. I also like talking about the web. Meeting new people is fun, too! Maybe we should chat.
+    I also like long walks in the woods. And talking about the web. But not at the same time. Oh, and meeting new people is fun, too! Maybe we should chat.
   social_links:
     - icon: twitter
       url: https://twitter.com/seancdavis29
@@ -46,23 +46,21 @@ bio:
   body_md: |-
     This rubber thing that sits atop an awkward tan line on my wrist starts buzzing at 5:00 AM every morning.
 
-    Most mornings I listen to it and pop right out of bed, already anxious to get to the computer. But first, of course, there's weighing myself (to assure myself that I'm still 40 pounds less than I was two years ago), letting the dog out, and making a cup of decaf coffee (you know, to wake me up).
+    Most days I listen to it and pop right out of bed, already anxious to get to the computer. But first, of course, there's _The Weigh-In_ (long story), letting the dog out, and making a cup of decaf coffee (you know, to wake me up).
 
-    While soaking the rare quiet moments on a busy street near the city, I head up to my office to do what I love — _tinker_ and _teach_.
+    While soaking in the rare quiet moments on a busy street near the city, I head up to my office to do what I love — _tinker_ and _teach_. I play with new tools I've discovered or I work on a side project, and then I [share what I've been doing or thinking about](https://cobwwweb.com/).
 
-    I'll spend the next hour _teaching_ — [writing (or editing a video) about some web development topic](https://cobwwweb.com/) I want to share with the world. The hour after that is when I _tinker_. I learn by creating something new, providing fodder for tomorrow's writing session.
+    That's about the time my toddler begins to rise from her glorious, 12-hour slumber to fill the quiet space with some new sound I hadn't known before. I use that as my alarm clock — a cue to transition to the part of the day during which normal people are awake.
 
-    That's about the time my toddler begins to rise from her glorious, 12-hour slumber to fill the quiet space with some new sound I hadn't known before. I use that as my alarm clock — a cue to transition to the part of the day normal people are awake.
+    The kid and I get dressed and walk to daycare. I leave her with a hug and a hope that she'll enjoy the day, and then set off on a detoured route home, popping on an audio book or calling a loved one while traversing the busy neighborhood streets.
 
-    The kid and I get dressed and walk together to daycare. I leave her with a hug and a hope that she'll enjoy this day more than I will, and set off for a long detour before I get home, popping on an audio book or calling a loved one while traversing the busy neighborhood streets.
+    After breakfast, I do stuff someone actually pays me for, as Director of Technology for [Ample](https://www.helloample.com/). I'm likely to spend most of my day exploring how to build [Jamstack](https://cobwwweb.com/wtf-is-jamstack) websites with efficiency and excellence, driving my team to find that perfect balance between quality and speed. Either that or I have eight straight hours of meetings.
 
-    After breakfast, I start the part of the day someone pays me for, in which I act as Director of Technology for [Ample](https://www.helloample.com/). I'm likely to spend most of my day exploring how to build [Jamstack](https://cobwwweb.com/wtf-is-jamstack) websites with efficiency and excellence, driving my team to find that perfect balance between quality and speed. Either that or I have 8 straight hours of meetings.
+    The end of the workday often comes with accompanying my wife and dog on another stroll, this time to pick up the girl from daycare. That's the best part of most days, because there's no agenda. We just have to make sure to keep our monsters fed and watered. And bathed occasionally, I suppose. But otherwise, that time is ours. Nothing to create. Nothing to teach. Just to have fun being a family.
 
-    The end of the workday often comes with accompanying my wife on another stroll up the street, this time to get the girl from daycare. That's the best part of most days, because there's no agenda for the evenings. We just have to make sure we feed that screaming monster at some point. And I suppose she has to be bathed occasionally. But otherwise, that time is ours. Not to create. Not to teach. To have fun.
+    Eventually it comes time to put the little noise machine to bed and then it's on to the next thing. Maybe it's a quiet night and I'll read a book. Or maybe I'll dig into another hobby, like playing music, baking bread, writing fiction, or growing plants from seed.
 
-    But then we put the noise machine to bed and I'm off to do something else. Maybe it's a quiet night and I'll read a book. Or maybe I'll dig into another hobby, like playing music, baking bread, writing fiction, or growing plants from seed.
-
-    When most days look like this one, I head to bed, exhausted and content, but never satisfied. Because tomorrow I get to wake up and do it all over again, hopefully better than today. So I take a moment to write a few words about the day, noting the wins I achieved, what I'm thankful for, and what I want to tomorrow to bring.
+    When a day looks like this, I head to bed, exhausted and content, but never satisfied. Because tomorrow I get to wake up and do it all over again, hopefully better than today. So I take a moment to write a few words about the day, noting the wins I achieved, what I'm thankful for, and what I want to tomorrow to bring.
 
     And as I drift off to sleep, thinking about the day, one idea remains, more important than the rest. That in the midst of all the work I did throughout the day — everything that drained the energy from me — that I had a little fun along the way.
 seo:
